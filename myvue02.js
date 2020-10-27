@@ -7,6 +7,7 @@ class Vue extends EventTarget{
     }
     observer(data){
         let keys = Object.keys(data);
+        let _this = this;
         keys.forEach(key=>{
             let value = data[key];
             Object.defineProperty(data,key,{
@@ -21,7 +22,7 @@ class Vue extends EventTarget{
                     // key 这里传参必须是独一无二的事件名称
                     // 重新编译；二次渲染；自定义事件；（观察者模式--订阅发布模式）
                     let event = new CustomEvent(key);
-                    this.dispatchEvent(event);
+                    _this.dispatchEvent(event);
                     if(newValue !== value)
                         value = newValue;
                 }
