@@ -21,7 +21,8 @@ class Vue{
                 if(reg.test(node.textContent)){
                     // 取字符
                     let $1 = RegExp.$1; // $1代表分组里的具体内容，第一个分组，$2 第二个分组
-                    console.log($1);
+                    // 替换数据内容
+                    node.textContent = this.$options.data[$1];
                 }
             }
         })
