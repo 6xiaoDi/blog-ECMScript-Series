@@ -50,7 +50,12 @@ class Vue extends EventTarget{
                     node.textContent = node.textContent.replace(reg,this.$options.data[$1]);
                     // 绑定事件处理函数
                     this.addEventListener($1,e=>{
-                        console.log("修了数据",e);
+                        let newValue = e.detail;
+                        // 匹配旧值；
+                        let oldValue = this.$options.data[$1];
+                        // reg = /oldValue/g;（这种写法是错误的，oldValue是变量，这里会把它当成字符串）
+                        reg = new RegExp(oldValue,"g"); // 全局匹配旧值
+                        node.textContent = node.textContent.replace(reg,newValue);
                     });
                 }
             }
