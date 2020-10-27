@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    // 创建对象
+    // 第一个参数，给一个空对象
+    // 第二个参数，给对象添加一个name属性
+    let newObj = Object.defineProperty({},'name',{
+        get(){
+            console.log("获取了数据");
+            return "张三";
+        },
+        set(newValue){
+            console.log("修改了",newValue);
+        }
+    })
+    console.log(newObj);
+</script>
+</html>
