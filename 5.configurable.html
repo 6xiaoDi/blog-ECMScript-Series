@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    let newObj = Object.defineProperty({},'name',{
+        configurable:true, // 是否可配置（默认false）
+        get(){
+            console.log("获取了数据");
+            return "张三";
+        },
+        set(newValue){
+            console.log("修改了",newValue);
+        }
+    })
+    delete newObj.name;
+    console.log(newObj);
+</script>
+</html>
