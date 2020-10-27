@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    // 修改对象；
+    let obj = {
+        name: "张三",
+        age: 20
+    }
+    let keys = Object.keys(obj); // 返回数组
+    keys.forEach(key => {
+        Object.defineProperty(obj, key, {
+            enumerable: true,
+            configurable: true,
+            get() {
+                return obj[key];
+            },
+            set(newValue) {
+                if (newValue !== obj[key])
+                    obj[key] = newValue;
+            }
+        })
+    });
+    console.log(obj);
+</script>
+</html>
