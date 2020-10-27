@@ -16,10 +16,12 @@ class Vue{
                 console.log("元素节点")
             }else if(node.nodeType===3){
                 console.log("文本节点",node.textContent);
-                let reg = /\{\{\s*\S+\s*\}\}/g;
+                let reg = /\{\{\s*(\S+)\s*\}\}/g;
                 // 正则匹配
                 if(reg.test(node.textContent)){
-                    console.log("存在大括号表达式");
+                    // 取字符
+                    let $1 = RegExp.$1; // $1代表分组里的具体内容，第一个分组，$2 第二个分组
+                    console.log($1);
                 }
             }
         })
