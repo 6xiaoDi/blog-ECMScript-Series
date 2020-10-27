@@ -10,5 +10,13 @@ class Vue{
     compileNode(ele){
         let childNodes = ele.childNodes;
         console.log(childNodes);
+        childNodes.forEach(node=>{
+            //  1元素节点 2属性节点 3文本节点
+            if(node.nodeType===1){
+                console.log("元素节点")
+            }else if(node.nodeType===3){
+                console.log("文本节点",node.textContent);
+            }
+        })
     }
 }
