@@ -64,7 +64,7 @@ class Vue extends EventTarget{
                     //     reg = new RegExp(oldValue,"g"); // 全局匹配旧值
                     //     node.textContent = node.textContent.replace(reg,newValue);
                     // });
-                    new Watcher((newValue)=>{
+                    new Watcher(this.$options.data,$1,(newValue)=>{
                         let oldValue = this.$options.data[$1];
                         reg = new RegExp(oldValue,"g");
                         node.textContent = node.textContent.replace(reg,newValue);
@@ -95,9 +95,12 @@ class Dep{
 // 订阅者
 // cb 回调函数
 class Watcher{
-    constructor(cb){
+    constructor(data,key,cb){
         Dep.target = this; // this指向实例化的Watcher（静态属性）
         this.cb = cb;
+        //人为触发get添加 watcher，之后再清空（寄存器）Dep.target
+        data[key];
+        Dep.target = null;
     }
     update(newValue){
         this.cb(newValue); // 执行回调
