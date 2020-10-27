@@ -14,11 +14,12 @@
     }
     let keys = Object.keys(obj); // 返回数组
     keys.forEach(key => {
+        let value = obj[key];
         Object.defineProperty(obj, key, {
             enumerable: true,
             configurable: true,
             get() {
-                return obj[key];
+                return value;
             },
             set(newValue) {
                 if (newValue !== obj[key])
