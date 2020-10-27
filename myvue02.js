@@ -1,5 +1,6 @@
-class Vue{
+class Vue extends EventTarget{
     constructor(options){
+        super();
         this.$options = options; // 仿照VUE，一些框架底层属性都会加一些特殊的符号（跟自己的属性做区分）
         this.observer(this.$options.data); // 监听数据
         this.compile();
@@ -17,6 +18,10 @@ class Vue{
                 },
                 set(newValue){
                     console.log("set..");
+                    // key 这里传参必须是独一无二的事件名称
+                    // 重新编译；二次渲染；自定义事件；（观察者模式--订阅发布模式）
+                    let event = new CustomEvent(key);
+                    this.dispatchEvent(event);
                     if(newValue !== value)
                         value = newValue;
                 }
@@ -42,6 +47,10 @@ class Vue{
                     // 取字符
                     let $1 = RegExp.$1; // $1代表分组里的具体内容，第一个分组，$2 第二个分组
                     node.textContent = node.textContent.replace(reg,this.$options.data[$1]);
+                    // 绑定事件处理函数
+                    this.addEventListener($1,e=>{
+                        console.log("修了数据",e);
+                    });
                 }
             }
         })
