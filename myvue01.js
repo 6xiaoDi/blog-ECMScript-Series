@@ -22,7 +22,7 @@ class Vue{
                     // 取字符
                     let $1 = RegExp.$1; // $1代表分组里的具体内容，第一个分组，$2 第二个分组
                     // 替换数据内容
-                    node.textContent = this.$options.data[$1];
+                    node.textContent = node.textContent.replace(reg,this.$options.data[$1]);
                 }
             }
         })
