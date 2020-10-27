@@ -21,7 +21,7 @@ class Vue extends EventTarget{
                     console.log("set..");
                     // key 这里传参必须是独一无二的事件名称
                     // 重新编译；二次渲染；自定义事件；（观察者模式--订阅发布模式）
-                    let event = new CustomEvent(key);
+                    let event = new CustomEvent(key,{detail:newValue});
                     _this.dispatchEvent(event);
                     if(newValue !== value)
                         value = newValue;
