@@ -65,7 +65,9 @@ class Vue extends EventTarget{
                     //     node.textContent = node.textContent.replace(reg,newValue);
                     // });
                     new Watcher((newValue)=>{
-                        console.log("---",newValue);
+                        let oldValue = this.$options.data[$1];
+                        reg = new RegExp(oldValue,"g");
+                        node.textContent = node.textContent.replace(reg,newValue);
                     })
 
                 }
