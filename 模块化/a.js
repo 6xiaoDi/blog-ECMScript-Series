@@ -1,5 +1,6 @@
 console.log("a文件");
 let a = 10;
+
 let obj = {
     name:"张三",
     age:20,
@@ -7,4 +8,9 @@ let obj = {
         console.log("fn...")
     }
 }
-export default obj;
+
+let fn = function(){
+    console.log(1111);
+}
+
+export default fn;
