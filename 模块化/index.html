@@ -7,7 +7,13 @@
 <body>
 </body>
 <script type="module">
-    import a from './a.js';
-    console.log(a);
+    // 1.引入对应的导出是export default
+    // import a from './a.js';
+    // console.log(a);
+    // 2.引入对应的导出是export
+    // 注意变量名一致
+    import { num, str } from './a.js';
+    console.log(num);
+    console.log(str);
 </script>
 </html>
