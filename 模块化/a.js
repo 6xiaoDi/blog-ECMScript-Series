@@ -17,4 +17,6 @@ console.log("a文件");
 let num = 10;
 let str = "我是字符串";
 export { num }
-export { str };
+// 别名 as
+// export { str };
+export {str as mystr}
