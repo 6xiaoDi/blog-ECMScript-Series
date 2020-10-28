@@ -11,9 +11,11 @@
     document.onclick = async function(){
         // import("./a.js");
         // 返还一个promise对象；
-        import("./a.js").then(res=>{
-            console.log(res);
-        });
+        // import("./a.js").then(res=>{
+        //     console.log(res);
+        // });
+        let res =   await import("./a.js");
+        console.log(res);
     }
 </script>
 </html>
