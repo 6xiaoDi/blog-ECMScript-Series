@@ -9,7 +9,11 @@
 <script>
     // 按需导入；
     document.onclick = async function(){
-        import("./a.js");
+        // import("./a.js");
+        // 返还一个promise对象；
+        import("./a.js").then(res=>{
+            console.log(res);
+        });
     }
 </script>
 </html>
