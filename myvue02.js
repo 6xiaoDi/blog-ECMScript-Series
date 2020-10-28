@@ -8,8 +8,9 @@ class Vue extends EventTarget{
     observer(data){
         let keys = Object.keys(data);
         let _this = this;
-        let dep = new Dep(); // 实例化管理器
+        // let dep = new Dep(); // 实例化管理器
         keys.forEach(key=>{
+            let dep = new Dep(); // 实例化管理器
             let value = data[key];
             Object.defineProperty(data,key,{
                 configurable:true,
