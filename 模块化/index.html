@@ -15,7 +15,10 @@
     // import { num as mynum, mystr } from './a.js';
     // console.log(mynum);
     // console.log(mystr);
-    import * as obj from './a.js';
-    console.log(obj);
+    // import * as obj from './a.js';
+    // console.log(obj);
+    // 3.引入 对应 export default和 export
+    import myobj,{num,mystr} from './a.js';
+    console.log(myobj,num,mystr);
 </script>
 </html>

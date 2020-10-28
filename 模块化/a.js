@@ -8,12 +8,12 @@ console.log("a文件");
 //         console.log("fn...")
 //     }
 // }
-//
-// let fn = function(){
-//     console.log(1111);
-// }
-//
-// export default fn;
+
+let fn = function(){
+    console.log(1111);
+}
+
+export default fn;
 let num = 10;
 let str = "我是字符串";
 export { num }
