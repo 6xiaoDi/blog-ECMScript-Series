@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    // 数据劫持；
+    let obj = {
+        name:"张三",
+        age:20
+    }
+
+    let newObj = new Proxy(obj,{
+        get(target,key){
+            console.log("get...");
+            return target[key];
+        },
+        set(target,key,newValue){
+            console.log("set...");
+            target[key] = newValue;
+        }
+    })
+    newObj.name = "李四";
+    console.log(obj);
+    console.log(newObj);
+</script>
+</html>
