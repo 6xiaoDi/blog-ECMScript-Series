@@ -28,5 +28,11 @@
 // console.log(a)
 // a = 5
 
-console.log(a)
-let a = 5
+// console.log(a)
+// let a = 5
+
+var a = 5
+if (true) {
+    a = 6
+    var a
+}
