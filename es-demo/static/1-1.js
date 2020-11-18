@@ -31,8 +31,13 @@
 // console.log(a)
 // let a = 5
 
-var a = 5
-if (true) {
-    a = 6
-    let a
+// var a = 5
+// if (true) {
+//     a = 6
+//     let a
+// }
+
+function foo(a = b, b = 2){
+    console.log(a, b)
 }
+foo()
