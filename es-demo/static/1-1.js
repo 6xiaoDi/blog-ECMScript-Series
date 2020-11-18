@@ -59,10 +59,16 @@
 //     let a = 5
 // }
 
-for (var i = 0; i < 3; i++) {
-    (function(j){
-        setTimeout(function(){
-            console.log(j)
-        })
-    })(i)
+// for (var i = 0; i < 3; i++) {
+//     (function(j){
+//         setTimeout(function(){
+//             console.log(j)
+//         })
+//     })(i)
+// }
+
+for (let i = 0; i < 3; i++) {
+    setTimeout(function () {
+        console.log(i)
+    })
 }
