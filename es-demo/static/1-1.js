@@ -55,6 +55,12 @@
 // if (true) var a =5;
 // if (true) let b =5;
 
-if (true) {
-    let a = 5
+// if (true) {
+//     let a = 5
+// }
+
+for (var i = 0; i < 3; i++) {
+    setTimeout(function(){
+        console.log(i)
+    })
 }
