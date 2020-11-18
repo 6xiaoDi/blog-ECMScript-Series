@@ -47,7 +47,10 @@
 // }
 // console.log('循环外:' + i)
 
-if (false) {
-    let a = 5
-}
-console.log(a)
+// if (false) {
+//     let a = 5
+// }
+// console.log(a)
+
+if (true) var a =5;
+if (true) let b =5;
