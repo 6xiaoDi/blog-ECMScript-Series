@@ -9,6 +9,10 @@
 // delete b
 // console.log(window.b)
 
-let a = 5
+// let a = 5
+// console.log(a)
+// console.log(window.a)
+
+var a = 5
+var a = 6
 console.log(a)
-console.log(window.a)
