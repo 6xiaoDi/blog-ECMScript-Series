@@ -34,5 +34,5 @@
 var a = 5
 if (true) {
     a = 6
-    var a
+    let a
 }
