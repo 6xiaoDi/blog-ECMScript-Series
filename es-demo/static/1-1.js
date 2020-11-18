@@ -48,6 +48,6 @@
 // console.log('循环外:' + i)
 
 if (false) {
-    var a = 5
+    let a = 5
 }
 console.log(a)
