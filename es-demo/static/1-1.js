@@ -52,5 +52,9 @@
 // }
 // console.log(a)
 
-if (true) var a =5;
-if (true) let b =5;
+// if (true) var a =5;
+// if (true) let b =5;
+
+if (true) {
+    let a = 5
+}
