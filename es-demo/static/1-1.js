@@ -37,7 +37,12 @@
 //     let a
 // }
 
-function foo(a = 2, b = a){
-    console.log(a, b)
+// function foo(a = 2, b = a){
+//     console.log(a, b)
+// }
+// foo()
+
+for (var i = 0; i < 3; i++) {
+    console.log('循环内:' + i)
 }
-foo()
+console.log('循环外:' + i)
