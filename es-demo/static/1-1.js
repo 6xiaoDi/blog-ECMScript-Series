@@ -24,6 +24,9 @@
 // console.log(a)
 // var a = 5
 
-var a
+// var a
+// console.log(a)
+// a = 5
+
 console.log(a)
-a = 5
+let a = 5
