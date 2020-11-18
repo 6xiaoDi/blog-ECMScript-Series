@@ -37,7 +37,7 @@
 //     let a
 // }
 
-function foo(a = b, b = 2){
+function foo(a = 2, b = a){
     console.log(a, b)
 }
 foo()
