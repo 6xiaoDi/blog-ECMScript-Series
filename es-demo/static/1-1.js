@@ -60,7 +60,9 @@
 // }
 
 for (var i = 0; i < 3; i++) {
-    setTimeout(function(){
-        console.log(i)
-    })
+    (function(j){
+        setTimeout(function(){
+            console.log(j)
+        })
+    })(i)
 }
