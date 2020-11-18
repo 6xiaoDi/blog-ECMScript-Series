@@ -42,7 +42,7 @@
 // }
 // foo()
 
-for (var i = 0; i < 3; i++) {
+for (let i = 0; i < 3; i++) {
     console.log('循环内:' + i)
 }
 console.log('循环外:' + i)
