@@ -31,6 +31,20 @@
 // obj.school = 'QH'
 // console.log(obj)
 
-const arr = [1, 2, 3]
-arr.push(4)
-console.log(arr)
+// const arr = [1, 2, 3]
+// arr.push(4)
+// console.log(arr)
+
+const obj = {
+    name: 'xd',
+    age: 28,
+    skill: {
+        name: 'code',
+        year: 5
+    }
+}
+Object.freeze(obj)
+console.log(obj)
+obj.school = 'QH'
+obj.skill.year = 10
+console.log(obj)
