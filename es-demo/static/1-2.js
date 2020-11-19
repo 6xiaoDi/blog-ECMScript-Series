@@ -7,5 +7,8 @@
 // PI = 5
 // console.log(PI)
 
-const a = 5
-a = 6
+// const a = 5
+// a = 6
+
+const a
+a = 5
