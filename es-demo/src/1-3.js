@@ -45,5 +45,11 @@
 // let [a, b, c, d, e, f] = str
 // console.log(a, b, c, d, e, f)
 
-let [a, b, c = 8] = [4, 5, 6]
-console.log(a, b, c)
+// let [a, b, c = 8] = [4, 5, 6]
+// console.log(a, b, c)
+
+let {name, age = 18} = {
+    name: "6xiaodi",
+    // age: 28
+}
+console.log(name, age)
