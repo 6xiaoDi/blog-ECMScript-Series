@@ -44,6 +44,7 @@ const obj = {
     }
 }
 Object.freeze(obj)
+Object.freeze(obj.skill)
 console.log(obj)
 obj.school = 'QH'
 obj.skill.year = 10
