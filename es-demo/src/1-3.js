@@ -66,12 +66,23 @@
 // let arr = [1, 2, 3]
 // foo(arr)
 
-function foo({name, age, school = 'beida'}) {
-    console.log(name, age, school)
-}
-let obj = {
+// function foo({name, age, school = 'beida'}) {
+//     console.log(name, age, school)
+// }
+// let obj = {
+//     name: 'lisi',
+//     age: 34,
+//     school: 'qinghua'
+// }
+// foo(obj)
+
+function foo() {
+    let obj = {
     name: 'lisi',
     age: 34,
     school: 'qinghua'
+    }
+    return obj
 }
-foo(obj)
+let {name, age} = foo()
+console.log(name, age)
