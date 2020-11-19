@@ -13,7 +13,12 @@
 // const a
 // a = 5
 
-if (true) {
+// if (true) {
+//     const a = 5
+// }
+// console.log(a)
+
+if(true){
+    console.log(a)
     const a = 5
 }
-console.log(a)
