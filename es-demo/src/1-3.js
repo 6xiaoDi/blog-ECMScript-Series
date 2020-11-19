@@ -38,9 +38,12 @@
 // let {age, name} = user;
 // console.log(name, age)
 
-let str = 'Github'
+// let str = 'Github'
 // for (let i = 0; i < str.length; i++) {
 //     console.log(str[i])
 // }
-let [a, b, c, d, e, f] = str
-console.log(a, b, c, d, e, f)
+// let [a, b, c, d, e, f] = str
+// console.log(a, b, c, d, e, f)
+
+let [a, b, c = 8] = [4, 5, 6]
+console.log(a, b, c)
