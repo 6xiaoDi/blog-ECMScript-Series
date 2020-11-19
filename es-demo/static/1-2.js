@@ -23,10 +23,14 @@
 //     const a = 5
 // }
 
-const obj = {
-    name: 'xd',
-    age: 28
-}
-console.log(obj)
-obj.school = 'QH'
-console.log(obj)
+// const obj = {
+//     name: 'xd',
+//     age: 28
+// }
+// console.log(obj)
+// obj.school = 'QH'
+// console.log(obj)
+
+const arr = [1, 2, 3]
+arr.push(4)
+console.log(arr)
