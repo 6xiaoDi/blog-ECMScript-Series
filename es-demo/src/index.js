@@ -2,4 +2,5 @@
 // console.log(sum(5, 6))
 // console.log(sum(7, 8))
 
-import './1-3'
+// import './1-3'
+import './1-4'
