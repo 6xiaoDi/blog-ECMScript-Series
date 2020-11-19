@@ -39,6 +39,8 @@
 // console.log(name, age)
 
 let str = 'Github'
-for (let i = 0; i < str.length; i++) {
-    console.log(str[i])
-}
+// for (let i = 0; i < str.length; i++) {
+//     console.log(str[i])
+// }
+let [a, b, c, d, e, f] = str
+console.log(a, b, c, d, e, f)
