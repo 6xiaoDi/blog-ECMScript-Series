@@ -18,7 +18,15 @@
 // }
 // console.log(a)
 
-if(true){
-    console.log(a)
-    const a = 5
+// if(true){
+//     console.log(a)
+//     const a = 5
+// }
+
+const obj = {
+    name: 'xd',
+    age: 28
 }
+console.log(obj)
+obj.school = 'QH'
+console.log(obj)
