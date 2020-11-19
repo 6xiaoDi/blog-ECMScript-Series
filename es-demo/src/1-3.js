@@ -76,13 +76,18 @@
 // }
 // foo(obj)
 
-function foo() {
-    let obj = {
-    name: 'lisi',
-    age: 34,
-    school: 'qinghua'
-    }
-    return obj
-}
-let {name, age} = foo()
-console.log(name, age)
+// function foo() {
+//     let obj = {
+//     name: 'lisi',
+//     age: 34,
+//     school: 'qinghua'
+//     }
+//     return obj
+// }
+// let {name, age} = foo()
+// console.log(name, age)
+
+// json
+let json = '{"a": "hello", "b": "world"}'
+let {a, b}= JSON.parse(json)
+console.log(a, b)
