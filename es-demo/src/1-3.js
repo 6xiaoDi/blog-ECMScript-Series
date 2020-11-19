@@ -50,12 +50,18 @@
 
 // let {name, age = 18} = {
 //     name: "6xiaodi",
-//     // age: 28
+//     age: 28
 // }
 // console.log(name, age)
 
-function foo(){
-    console.log(123)
+// function foo(){
+//     console.log(123)
+// }
+// // let [a = foo()] = [1]
+// let [a = foo()] = []
+
+function foo([a, b, c]) {
+    console.log(a, b, c)
 }
-// let [a = foo()] = [1]
-let [a = foo()] = []
+let arr = [1, 2, 3]
+foo(arr)
