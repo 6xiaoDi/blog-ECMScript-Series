@@ -23,17 +23,22 @@
 // let [a, b, c, d = 5] = [1, 2, [3, 4], 6]
 // console.log(a, b, c, d)
 
-let user = {
-    name: '6xd',
-    age: 28
-}
+// let user = {
+//     name: '6xd',
+//     age: 28
+// }
 // let name = user.name
 // let age = user.age
 // let {age, name} = user;
 // console.log(name, age);
-let {age: uage, name: uname} = user
-uname = 'xm'
-uage = 99
-console.log(uname, uage)
-let {age, name} = user;
-console.log(name, age)
+// let {age: uage, name: uname} = user
+// uname = 'xm'
+// uage = 99
+// console.log(uname, uage)
+// let {age, name} = user;
+// console.log(name, age)
+
+let str = 'Github'
+for (let i = 0; i < str.length; i++) {
+    console.log(str[i])
+}
