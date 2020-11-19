@@ -48,8 +48,14 @@
 // let [a, b, c = 8] = [4, 5, 6]
 // console.log(a, b, c)
 
-let {name, age = 18} = {
-    name: "6xiaodi",
-    // age: 28
+// let {name, age = 18} = {
+//     name: "6xiaodi",
+//     // age: 28
+// }
+// console.log(name, age)
+
+function foo(){
+    console.log(123)
 }
-console.log(name, age)
+// let [a = foo()] = [1]
+let [a = foo()] = []
