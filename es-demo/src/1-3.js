@@ -27,6 +27,7 @@ let user = {
     name: '6xd',
     age: 28
 }
-let name = user.name
-let age = user.age
+// let name = user.name
+// let age = user.age
+let {age, name} = user;
 console.log(name, age);
