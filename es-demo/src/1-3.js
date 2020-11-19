@@ -8,5 +8,8 @@
 // let [a, b, [c, d]] = [1, 2, [3, 4]]
 // console.log(a, b, c, d)
 
-let [a, b, [c]] = [1, 2, [3, 4]]
+// let [a, b, [c]] = [1, 2, [3, 4]]
+// console.log(a, b, c)
+
+let [a, b, c] = [1, 2, [3, 4]]
 console.log(a, b, c)
