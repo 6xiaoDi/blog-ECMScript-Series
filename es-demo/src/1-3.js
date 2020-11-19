@@ -60,8 +60,18 @@
 // // let [a = foo()] = [1]
 // let [a = foo()] = []
 
-function foo([a, b, c]) {
-    console.log(a, b, c)
+// function foo([a, b, c]) {
+//     console.log(a, b, c)
+// }
+// let arr = [1, 2, 3]
+// foo(arr)
+
+function foo({name, age, school = 'beida'}) {
+    console.log(name, age, school)
 }
-let arr = [1, 2, 3]
-foo(arr)
+let obj = {
+    name: 'lisi',
+    age: 34,
+    school: 'qinghua'
+}
+foo(obj)
