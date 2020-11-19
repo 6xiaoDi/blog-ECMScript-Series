@@ -32,4 +32,8 @@ let user = {
 // let {age, name} = user;
 // console.log(name, age);
 let {age: uage, name: uname} = user
+uname = 'xm'
+uage = 99
 console.log(uname, uage)
+let {age, name} = user;
+console.log(name, age)
