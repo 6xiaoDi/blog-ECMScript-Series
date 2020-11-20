@@ -42,7 +42,12 @@ let arr = [1, 2, 3, 2, 4]
 // console.log(arr, result)
 
 // filter
-let result = arr.filter(function (value) {
-    return value == 2
+// let result = arr.filter(function (value) {
+//     return value == 2
+// })
+// console.log(arr, result)
+
+// some
+let result = arr.some(function (value) {
+    console.log(value)
 })
-console.log(arr, result)
