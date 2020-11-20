@@ -93,7 +93,15 @@ let arr = [1, 2, 3, 2, 4]
 // console.log(arr, res)
 
 // findIndex
-let res = arr.findIndex(function (value) {
-    return value == 2
-})
-console.log(arr, res)
+// let res = arr.findIndex(function (value) {
+//     return value == 2
+// })
+// console.log(arr, res)
+
+// for of
+Array.prototype.foo = function(){
+    console.log('foo')
+}
+for(let item of arr){
+    console.log(item)
+}
