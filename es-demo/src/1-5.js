@@ -54,7 +54,13 @@
 // let arr = new Array(3).fill(7)
 // console.log(arr)
 
-let arr = [1, 2, 3, 4, 5]
-// arr.fill('abc', 1, 3)
-arr.fill(0)
-console.log(arr)
+// let arr = [1, 2, 3, 4, 5]
+// // arr.fill('abc', 1, 3)
+// arr.fill(0)
+// console.log(arr)
+
+let arr = [1, 2, 3, NaN]
+// console.log(arr.indexOf(1))
+// console.log(arr.indexOf(2))
+// console.log(arr.indexOf(5))
+console.log(arr.indexOf(NaN))
