@@ -106,6 +106,10 @@ let arr = [1, 2, 3, 2, 4]
 //     console.log(item)
 // }
 
-for(let item of arr.values()){
+// for(let item of arr.values()){
+//     console.log(item)
+// }
+
+for(let item of arr.keys()){
     console.log(item)
 }
