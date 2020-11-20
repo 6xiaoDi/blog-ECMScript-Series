@@ -40,5 +40,10 @@
 // let arr = Array.of(1, 2)
 // console.log(arr)
 
-let arr = Array.of(3)
+// let arr = Array.of(3)
+// console.log(arr)
+
+let arr = Array.of(1, true, 'abc', [1, 2, 3], {
+    name: 'zhangsan'
+})
 console.log(arr)
