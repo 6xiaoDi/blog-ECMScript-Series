@@ -49,5 +49,7 @@ let arr = [1, 2, 3, 2, 4]
 
 // some
 let result = arr.some(function (value) {
-    console.log(value)
+    // console.log(value)
+    return value == 4
 })
+console.log(arr, result)
