@@ -78,6 +78,9 @@ let arr = [1, 2, 3, 2, 4]
 // }, [])
 // console.log(res)
 
+Array.prototype.foo = function(){
+    console.log('foo')
+}
 for(let index in arr){
     console.log(index, arr[index])
 }
