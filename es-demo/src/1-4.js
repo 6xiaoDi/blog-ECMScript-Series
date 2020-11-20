@@ -43,5 +43,6 @@ let arr = [1, 2, 3, 2, 4]
 
 // filter
 let result = arr.filter(function (value) {
-    console.log(value)
+    return value == 2
 })
+console.log(arr, result)
