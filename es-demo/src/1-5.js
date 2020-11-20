@@ -63,4 +63,6 @@ let arr = [1, 2, 3, NaN]
 // console.log(arr.indexOf(1))
 // console.log(arr.indexOf(2))
 // console.log(arr.indexOf(5))
-console.log(arr.indexOf(NaN))
+// console.log(arr.indexOf(NaN))
+console.log(NaN == NaN)
+console.log(arr.includes(NaN))
