@@ -4,7 +4,7 @@
   "description": "es编译环境脚手架工具",
   "main": "index.js",
   "scripts": {
-    "start": "webpack serve --mode development --config ./build/webpack.config.js",
+    "start": "webpack-dev-server --mode=development --config ./build/webpack.config.js",
     "build": "webpack --mode=production --config ./build/webpack.config.js"
   },
   "repository": {
@@ -27,8 +27,8 @@
     "copy-webpack-plugin": "^6.3.1",
     "core-js": "^2.6.11",
     "html-webpack-plugin": "^4.5.0",
-    "webpack": "^5.4.0",
-    "webpack-cli": "^4.2.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^5.4.0"
   }
