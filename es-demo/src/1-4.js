@@ -55,6 +55,8 @@ let arr = [1, 2, 3, 2, 4]
 // console.log(arr, result)
 
 // every
-arr.every(function (value) {
-    console.log(value)
+let result = arr.every(function (value) {
+    // console.log(value)
+    return value == 2
 })
+console.log(arr, result)
