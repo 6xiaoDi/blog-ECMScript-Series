@@ -78,9 +78,16 @@ let arr = [1, 2, 3, 2, 4]
 // }, [])
 // console.log(res)
 
-Array.prototype.foo = function(){
-    console.log('foo')
-}
-for(let index in arr){
-    console.log(index, arr[index])
-}
+// Array.prototype.foo = function(){
+//     console.log('foo')
+// }
+// for(let index in arr){
+//     console.log(index, arr[index])
+// }
+
+// find
+let res = arr.find(function (value) {
+    // return value == 2
+    return value == 8
+})
+console.log(arr, res)
