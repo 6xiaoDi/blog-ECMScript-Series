@@ -31,6 +31,12 @@ let arr = [1, 2, 3, 2, 4]
 // })
 
 // map
-arr.map(function(value){
-   console.log(value)
+// arr.map(function(value){
+//    console.log(value)
+// })
+
+let result = arr.map(function(value){
+   value += 1
+   return value
 })
+console.log(arr, result)
