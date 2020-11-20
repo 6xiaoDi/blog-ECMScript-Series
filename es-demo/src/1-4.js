@@ -86,8 +86,14 @@ let arr = [1, 2, 3, 2, 4]
 // }
 
 // find
-let res = arr.find(function (value) {
-    // return value == 2
-    return value == 8
+// let res = arr.find(function (value) {
+//     // return value == 2
+//     return value == 8
+// })
+// console.log(arr, res)
+
+// findIndex
+let res = arr.findIndex(function (value) {
+    return value == 2
 })
 console.log(arr, res)
