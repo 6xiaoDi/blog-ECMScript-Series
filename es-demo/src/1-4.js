@@ -55,8 +55,14 @@ let arr = [1, 2, 3, 2, 4]
 // console.log(arr, result)
 
 // every
-let result = arr.every(function (value) {
-    // console.log(value)
-    return value == 2
-})
-console.log(arr, result)
+// let result = arr.every(function (value) {
+//     // console.log(value)
+//     return value == 2
+// })
+// console.log(arr, result)
+
+// reduce
+let sum = arr.reduce(function(prev, cur, index, array){
+    return prev + cur
+}, 0)
+console.log(sum)
