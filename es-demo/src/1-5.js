@@ -7,3 +7,4 @@
 
 let divs3 = document.querySelectorAll('.xx')
 console.log(divs3 instanceof Array) // NodeList
+divs3.push(123)
