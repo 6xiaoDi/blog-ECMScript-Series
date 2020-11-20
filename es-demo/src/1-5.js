@@ -43,7 +43,10 @@
 // let arr = Array.of(3)
 // console.log(arr)
 
-let arr = Array.of(1, true, 'abc', [1, 2, 3], {
-    name: 'zhangsan'
-})
-console.log(arr)
+// let arr = Array.of(1, true, 'abc', [1, 2, 3], {
+//     name: 'zhangsan'
+// })
+// console.log(arr)
+
+let arr = [1, 2, 3, 4, 5]
+console.log(arr.copyWithin(1, 3))
