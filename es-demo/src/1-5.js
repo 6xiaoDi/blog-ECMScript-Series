@@ -15,8 +15,18 @@
 // arr.push(123)
 // console.log(arr)
 
-function foo(){
-    console.log(arguments)
-    console.log(arguments instanceof Array)
+// function foo(){
+//     console.log(arguments)
+//     console.log(arguments instanceof Array)
+// }
+// foo(1, 'abc', true)
+
+let arrayLike = {
+    0: 'es6',
+    1: 'es7',
+    2: 'es8',
+    length: 3
 }
-foo(1, 'abc', true)
+let arr = Array.from(arrayLike)
+arr.push('es9')
+console.log(arr)
