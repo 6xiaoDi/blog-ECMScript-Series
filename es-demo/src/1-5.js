@@ -55,5 +55,6 @@
 // console.log(arr)
 
 let arr = [1, 2, 3, 4, 5]
-arr.fill('abc', 1, 3)
+// arr.fill('abc', 1, 3)
+arr.fill(0)
 console.log(arr)
