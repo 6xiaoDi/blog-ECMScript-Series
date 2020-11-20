@@ -67,7 +67,13 @@ let arr = [1, 2, 3, 2, 4]
 // }, 0)
 // console.log(sum)
 
-let max = arr.reduce(function(prev, cur){
-    return Math.max(prev, cur)
-})
-console.log(max)
+// let max = arr.reduce(function(prev, cur){
+//     return Math.max(prev, cur)
+// })
+// console.log(max)
+
+let res = arr.reduce(function(prev, cur){
+    prev.indexOf(cur) == -1 && prev.push(cur)
+    return prev
+}, [])
+console.log(res)
