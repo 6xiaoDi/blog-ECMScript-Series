@@ -51,5 +51,9 @@
 // let arr = [1, 2, 3, 4, 5]
 // console.log(arr.copyWithin(1, 3))
 
-let arr = new Array(3).fill(7)
+// let arr = new Array(3).fill(7)
+// console.log(arr)
+
+let arr = [1, 2, 3, 4, 5]
+arr.fill('abc', 1, 3)
 console.log(arr)
