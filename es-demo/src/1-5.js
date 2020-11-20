@@ -37,5 +37,8 @@
 // let arr = new Array(3)
 // console.log(arr)
 
-let arr = Array.of(1, 2)
+// let arr = Array.of(1, 2)
+// console.log(arr)
+
+let arr = Array.of(3)
 console.log(arr)
