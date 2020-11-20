@@ -35,8 +35,13 @@ let arr = [1, 2, 3, 2, 4]
 //    console.log(value)
 // })
 
-let result = arr.map(function(value){
-   value += 1
-   return value
+// let result = arr.map(function(value){
+//    value += 1
+//    return value
+// })
+// console.log(arr, result)
+
+// filter
+let result = arr.filter(function (value) {
+    console.log(value)
 })
-console.log(arr, result)
