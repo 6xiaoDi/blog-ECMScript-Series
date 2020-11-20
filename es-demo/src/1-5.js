@@ -21,12 +21,15 @@
 // }
 // foo(1, 'abc', true)
 
-let arrayLike = {
-    0: 'es6',
-    1: 'es7',
-    2: 'es8',
-    length: 3
-}
-let arr = Array.from(arrayLike)
-arr.push('es9')
+// let arrayLike = {
+//     0: 'es6',
+//     1: 'es7',
+//     2: 'es8',
+//     length: 3
+// }
+// let arr = Array.from(arrayLike)
+// arr.push('es9')
+// console.log(arr)
+
+let arr = new Array(1, 2)
 console.log(arr)
