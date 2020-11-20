@@ -48,8 +48,13 @@ let arr = [1, 2, 3, 2, 4]
 // console.log(arr, result)
 
 // some
-let result = arr.some(function (value) {
-    // console.log(value)
-    return value == 4
+// let result = arr.some(function (value) {
+//     // console.log(value)
+//     return value == 4
+// })
+// console.log(arr, result)
+
+// every
+arr.every(function (value) {
+    console.log(value)
 })
-console.log(arr, result)
