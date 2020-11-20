@@ -31,5 +31,8 @@
 // arr.push('es9')
 // console.log(arr)
 
-let arr = new Array(1, 2)
+// let arr = new Array(1, 2)
+// console.log(arr)
+
+let arr = new Array(3)
 console.log(arr)
