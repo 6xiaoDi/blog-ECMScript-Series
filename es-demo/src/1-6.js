@@ -17,7 +17,11 @@
 // }
 // foo()
 
-function foo(x, x, y = 5) {
+// function foo(x, x, y = 5) {
+// }
+// foo(1, 2)
+
+function foo(x, y = 5, z) {
+    console.log(x, y, z)
 }
 foo(1, 2)
-
