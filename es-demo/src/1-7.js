@@ -18,9 +18,19 @@
 // console.log(arr)
 
 // rest参数
+// function foo(x, y, z) {
+//     let sum = 0
+//     Array.prototype.forEach.call(arguments, function(item){
+//         sum += item
+//     })
+//     return sum
+// }
+// console.log(foo(1, 2))
+// console.log(foo(1, 2, 3))
+
 function foo(x, y, z) {
     let sum = 0
-    Array.prototype.forEach.call(arguments, function(item){
+    Array.from(arguments).forEach(function(item){
         sum += item
     })
     return sum
