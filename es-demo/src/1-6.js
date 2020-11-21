@@ -60,12 +60,18 @@
 // }
 // console.log(foo.length)
 
-function foo(x, y, z = 3){
-    console.log(x, y)
-}
-console.log(foo.length)
+// function foo(x, y, z = 3){
+//     console.log(x, y)
+// }
+// console.log(foo.length)
+//
+// function foo1(x = 1, y = 2, z = 3){
+//     console.log(x, y)
+// }
+// console.log(foo1.length)
 
-function foo1(x = 1, y = 2, z = 3){
-    console.log(x, y)
+let x = 1
+function foo(x, y = x){
+    console.log(y) // 2
 }
-console.log(foo1.length)
+foo(2)
