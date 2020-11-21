@@ -17,8 +17,11 @@
 // let sum = (x, y) => x + y
 // console.log(sum(3, 4))
 
-let x = x => x
+// let x = x => x
 
-let x = function(x){
-    return x
-}
+// let x = function(x){
+//     return x
+// }
+
+let oBtn = document.querySelector('#btn')
+console.log(oBtn)
