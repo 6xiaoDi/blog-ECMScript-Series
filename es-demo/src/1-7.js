@@ -28,9 +28,20 @@
 // console.log(foo(1, 2))
 // console.log(foo(1, 2, 3))
 
-function foo(x, y, z) {
+// function foo(x, y, z) {
+//     let sum = 0
+//     Array.from(arguments).forEach(function(item){
+//         sum += item
+//     })
+//     return sum
+// }
+// console.log(foo(1, 2))
+// console.log(foo(1, 2, 3))
+
+function foo(...args){
+    console.log(args)
     let sum = 0
-    Array.from(arguments).forEach(function(item){
+    args.forEach(function(item){
         sum += item
     })
     return sum
