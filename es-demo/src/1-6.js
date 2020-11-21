@@ -70,8 +70,15 @@
 // }
 // console.log(foo1.length)
 
+// let x = 1
+// function foo(x, y = x){
+//     console.log(y) // 2
+// }
+// foo(2)
+
 let x = 1
-function foo(x, y = x){
-    console.log(y) // 2
+function foo(y = x) {
+    let x = 2
+    console.log(y) // 1
 }
-foo(2)
+foo()
