@@ -24,4 +24,6 @@
 // }
 
 let oBtn = document.querySelector('#btn')
-console.log(oBtn)
+oBtn.addEventListener('click', function () {
+    console.log(this)
+})
