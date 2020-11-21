@@ -76,9 +76,15 @@
 // }
 // foo(2)
 
-let x = 1
-function foo(y = x) {
+// let x = 1
+// function foo(y = x) {
+//     let x = 2
+//     console.log(y) // 1
+// }
+// foo()
+
+function foo(y = x){
     let x = 2
-    console.log(y) // 1
+    console.log(y)
 }
 foo()
