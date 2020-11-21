@@ -31,9 +31,9 @@
 // }
 // foo(1, 2)
 
-function foo({x, y = 5}){
-    console.log(x, y)
-}
+// function foo({x, y = 5}){
+//     console.log(x, y)
+// }
 
 // foo({})
 // foo({
@@ -41,4 +41,16 @@ function foo({x, y = 5}){
 //     y: 2
 // })
 
-foo()
+// foo()
+
+function ajax(url, {
+    body = '',
+    method = 'GET',
+    headers = {}
+} = {}){
+    console.log(method)
+}
+
+ajax('http://www.abc.com', {
+   method: 'POST'
+})
