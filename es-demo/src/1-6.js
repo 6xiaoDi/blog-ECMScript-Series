@@ -94,9 +94,11 @@
 // function foo(){}
 // console.log(foo.name)
 
-function foo(x, y){
-    console.log(this, x, y)
-}
+// function foo(x, y){
+//     console.log(this, x, y)
+// }
 
-foo.bind({name: 'lisi'})(1, 2)
-console.log(foo.bind({}).name)
+// foo.bind({name: 'lisi'})(1, 2)
+// console.log(foo.bind({}).name)
+
+console.log((function(){}).bind({}).name)
