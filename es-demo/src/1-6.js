@@ -21,7 +21,12 @@
 // }
 // foo(1, 2)
 
-function foo(x, y = 5, z) {
+// function foo(x, y = 5, z) {
+//     console.log(x, y, z)
+// }
+// foo(1, 2)
+
+function foo(x, z, y = 5) {
     console.log(x, y, z)
 }
 foo(1, 2)
