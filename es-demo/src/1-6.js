@@ -83,8 +83,10 @@
 // }
 // foo()
 
-function foo(y = x){
-    let x = 2
-    console.log(y)
-}
-foo()
+// function foo(y = x){
+//     let x = 2
+//     console.log(y)
+// }
+// foo()
+
+console.log((new Function).name) //anonymous
