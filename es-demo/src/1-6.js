@@ -11,8 +11,13 @@
 // foo('hello', 0)
 // foo('hello')
 
-function foo(x = 5) {
-    // let x = 1
-    const x = 1
+// function foo(x = 5) {
+//     // let x = 1
+//     const x = 1
+// }
+// foo()
+
+function foo(x, x, y = 5) {
 }
-foo()
+foo(1, 2)
+
