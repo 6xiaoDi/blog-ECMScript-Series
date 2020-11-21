@@ -89,4 +89,7 @@
 // }
 // foo()
 
-console.log((new Function).name) //anonymous
+// console.log((new Function).name) //anonymous
+
+function foo(){}
+console.log(foo.name)
