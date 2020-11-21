@@ -13,5 +13,12 @@
 // let sum = (x, y) => {
 //     return x + y
 // }
-let sum = (x, y) => x + y
-console.log(sum(3, 4))
+
+// let sum = (x, y) => x + y
+// console.log(sum(3, 4))
+
+let x = x => x
+
+let x = function(x){
+    return x
+}
