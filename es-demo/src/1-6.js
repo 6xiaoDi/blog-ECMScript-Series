@@ -43,14 +43,19 @@
 
 // foo()
 
-function ajax(url, {
-    body = '',
-    method = 'GET',
-    headers = {}
-} = {}){
-    console.log(method)
-}
+// function ajax(url, {
+//     body = '',
+//     method = 'GET',
+//     headers = {}
+// } = {}){
+//     console.log(method)
+// }
+//
+// ajax('http://www.abc.com', {
+//    method: 'POST'
+// })
 
-ajax('http://www.abc.com', {
-   method: 'POST'
-})
+function foo(x, y, z){
+    console.log(x, y)
+}
+console.log(foo.length)
