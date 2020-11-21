@@ -49,9 +49,13 @@
 // console.log(foo(1, 2))
 // console.log(foo(1, 2, 3))
 
-function foo(x, ...args) {
-    console.log(x)
-    console.log(args)
-}
-foo(1, 2, 3)
-foo(1, 2, 3, 4)
+// function foo(x, ...args) {
+//     console.log(x)
+//     console.log(args)
+// }
+// foo(1, 2, 3)
+// foo(1, 2, 3, 4)
+
+let [x, ...y] = [1, 2, 3]
+console.log(x)
+console.log(y)
