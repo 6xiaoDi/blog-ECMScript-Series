@@ -91,5 +91,12 @@
 
 // console.log((new Function).name) //anonymous
 
-function foo(){}
-console.log(foo.name)
+// function foo(){}
+// console.log(foo.name)
+
+function foo(x, y){
+    console.log(this, x, y)
+}
+
+foo.bind({name: 'lisi'})(1, 2)
+console.log(foo.bind({}).name)
