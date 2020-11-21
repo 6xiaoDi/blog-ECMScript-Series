@@ -38,13 +38,20 @@
 // console.log(foo(1, 2))
 // console.log(foo(1, 2, 3))
 
-function foo(...args){
+// function foo(...args){
+//     console.log(args)
+//     let sum = 0
+//     args.forEach(function(item){
+//         sum += item
+//     })
+//     return sum
+// }
+// console.log(foo(1, 2))
+// console.log(foo(1, 2, 3))
+
+function foo(x, ...args) {
+    console.log(x)
     console.log(args)
-    let sum = 0
-    args.forEach(function(item){
-        sum += item
-    })
-    return sum
 }
-console.log(foo(1, 2))
-console.log(foo(1, 2, 3))
+foo(1, 2, 3)
+foo(1, 2, 3, 4)
