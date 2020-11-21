@@ -10,7 +10,8 @@
 //     return x + y
 // }
 
-let sum = (x, y) => {
-    return x + y
-}
+// let sum = (x, y) => {
+//     return x + y
+// }
+let sum = (x, y) => x + y
 console.log(sum(3, 4))
