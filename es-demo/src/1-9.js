@@ -19,10 +19,10 @@
 // console.log(Object.is(NaN, NaN))
 // console.log(Object.is(+0, -0))
 
-let obj1 = {  // new Object()
-    name: 'lisi',
-    age: 30
-}
+// let obj1 = {  // new Object()
+//     name: 'lisi',
+//     age: 30
+// }
 
 // let obj2 = { // new Object()
 //     name: 'lisi',
@@ -31,5 +31,12 @@ let obj1 = {  // new Object()
 // console.log(obj1 == obj2) // false
 
 // console.log(Object.is(obj1, obj2)) // false
-let obj2 = obj1
-console.log(Object.is(obj1, obj2)) // true
+// let obj2 = obj1
+// console.log(Object.is(obj1, obj2)) // true
+
+let x = {
+    a: 3,
+    b: 4
+}
+let y = {...x}
+console.log(y)
