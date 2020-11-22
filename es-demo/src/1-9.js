@@ -43,5 +43,7 @@ let y = {
     c: 5,
     a: 6
 }
-Object.assign(y, x)
-console.log(y)
+// Object.assign(y, x)
+// console.log(y)
+console.log('a' in x)
+console.log('aa' in x)
