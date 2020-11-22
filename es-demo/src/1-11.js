@@ -5,10 +5,11 @@ function People(name, age) {
     // 实例属性
     this.name = name
     this.age = age
-    // 方法
-    this.showName = function () {
-        console.log('我的名字是' + this.name)
-    }
+}
+
+// 实例方法
+People.prototype.showName = function () {
+    console.log('我的名字是' + this.name)
 }
 
 // 实例化对象
