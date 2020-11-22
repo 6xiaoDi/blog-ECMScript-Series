@@ -36,19 +36,27 @@
 // console.log(obj2)
 
 //JSON => '{"a": "hello", "b": "world"}'
-let obj = JSON.parse('{"a": "hello", "b": "world"}')
-console.log(obj)
-let str1 = JSON.stringify(obj)
-console.log(str1)
-
-let obj1 = {
-    name: 'lisi',
-    age: 30
-}
+// let obj = JSON.parse('{"a": "hello", "b": "world"}')
+// console.log(obj)
+// let str1 = JSON.stringify(obj)
+// console.log(str1)
+//
+// let obj1 = {
+//     name: 'lisi',
+//     age: 30
+// }
 
 // 深拷贝
-let str2 = JSON.stringify(obj1)
-let obj2 = JSON.parse(str2)
-obj1.age = 18
-console.log(obj2)
-console.log(obj1)
+// let str2 = JSON.stringify(obj1)
+// let obj2 = JSON.parse(str2)
+// obj1.age = 18
+// console.log(obj2)
+// console.log(obj1)
+
+
+// 检查类型
+let checkType = data => {
+    console.log(Object.prototype.toString.call(data))
+}
+checkType({})
+checkType([])
