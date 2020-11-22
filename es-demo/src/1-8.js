@@ -31,8 +31,12 @@
 // })
 
 // 类
-function People(name, age){
-    console.log(this)
+// function People(name, age){
+//     console.log(this)
+//     this.name = name
+//     this.age = age
+// }
+let People = (name, age) => {
     this.name = name
     this.age = age
 }
