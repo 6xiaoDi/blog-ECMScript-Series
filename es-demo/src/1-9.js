@@ -39,6 +39,9 @@ let x = {
     b: 4
 }
 // let y = {...x}
-let y = {}
+let y = {
+    c: 5,
+    a: 6
+}
 Object.assign(y, x)
 console.log(y)
