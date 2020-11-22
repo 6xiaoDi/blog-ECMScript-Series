@@ -56,7 +56,49 @@
 
 // 检查类型
 let checkType = data => {
-    console.log(Object.prototype.toString.call(data).slice(8, -1))
+    return Object.prototype.toString.call(data).slice(8, -1);
 }
-checkType({})
-checkType([])
+
+// 深拷贝
+let deepClone = target => {
+    let targetType = checkType(target)
+    let result
+    // 对象
+    if (targetType === 'Object') {
+        result = {}
+    // 数组
+    } else if (targetType === 'Array') {
+        result = []
+    // 基本数据类型、函数类型等
+    } else {
+        return target
+    }
+    for (let i in target) {
+        let value = target[i]
+        let valueType = checkType(value)
+        // 数组、对象则深拷贝
+        if (valueType === 'Object' || valueType === 'Array') {
+            result[i] = deepClone(value) // 递归
+        // 基本数据类型、函数类型等 直接赋值
+        } else {
+            result[i] = value
+        }
+    }
+    return result
+}
+
+let arr1 = [1, 2, {age: 18}]
+let arr2 = deepClone(arr1)
+arr2[2].age = 34
+console.log(arr1)
+
+let obj1 = {
+    name: 'lisi',
+    hobby: ['coding', 'playing basketball']
+}
+let obj2 = deepClone(obj1)
+obj2.hobby[0] = 'sleeping'
+console.log('obj1 => ')
+console.log(obj1);
+console.log('obj2 => ')
+console.log(obj2);
