@@ -5,7 +5,10 @@ let obj = {
     name,
     age,
     [s]: 'abcdefg',
-    study(){
+    // study(){
+    //     console.log(this.name + '正在学习')
+    // }
+    study:() => {
         console.log(this.name + '正在学习')
     }
 }
