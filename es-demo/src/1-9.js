@@ -48,5 +48,14 @@
 // console.log('a' in x)
 // console.log('aa' in x)
 
-let arr = [1, 2, 3]
-console.log(2 in arr)
+// let arr = [1, 2, 3]
+// console.log(2 in arr)
+
+let obj = {
+    name: 'lisi',
+    age: 30,
+    school: 'beida'
+}
+for(let key in obj){
+    console.log(key, obj[key])
+}
