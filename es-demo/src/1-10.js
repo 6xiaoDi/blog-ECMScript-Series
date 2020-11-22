@@ -1,7 +1,12 @@
 let target = {}
 let source = {
-    a: 1,
-    b: 2
+    a: {
+        b: {
+            c: 1
+        },
+        e: 2,
+        f: 3
+    }
 }
 Object.assign(target, source)
 console.log(target)
