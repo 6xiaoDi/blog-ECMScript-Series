@@ -23,9 +23,18 @@
 //     return x
 // }
 
-let oBtn = document.querySelector('#btn')
-oBtn.addEventListener('click', function () {
-    setTimeout(() => {
-        console.log(this)
-    }, 1000)
-})
+// let oBtn = document.querySelector('#btn')
+// oBtn.addEventListener('click', function () {
+//     setTimeout(() => {
+//         console.log(this)
+//     }, 1000)
+// })
+
+// 类
+function People(name, age){
+    console.log(this)
+    this.name = name
+    this.age = age
+}
+let p1 = new People('zhangsan', 30)
+console.log(p1)
