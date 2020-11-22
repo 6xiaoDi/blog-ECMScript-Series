@@ -38,5 +38,7 @@ let x = {
     a: 3,
     b: 4
 }
-let y = {...x}
+// let y = {...x}
+let y = {}
+Object.assign(y, x)
 console.log(y)
