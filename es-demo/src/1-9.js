@@ -24,10 +24,12 @@ let obj1 = {  // new Object()
     age: 30
 }
 
-let obj2 = { // new Object()
-    name: 'lisi',
-    age: 30
-}
-console.log(obj1 == obj2) // false
+// let obj2 = { // new Object()
+//     name: 'lisi',
+//     age: 30
+// }
+// console.log(obj1 == obj2) // false
 
-console.log(Object.is(obj1, obj2)) // false
+// console.log(Object.is(obj1, obj2)) // false
+let obj2 = obj1
+console.log(Object.is(obj1, obj2)) // true
