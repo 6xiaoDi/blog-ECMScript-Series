@@ -27,5 +27,5 @@ let oBtn = document.querySelector('#btn')
 oBtn.addEventListener('click', function () {
     setTimeout(function(){
         console.log(this)
-    }, 1000)
+    }.bind(this), 1000)
 })
