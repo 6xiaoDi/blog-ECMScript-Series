@@ -34,16 +34,19 @@
 // let obj2 = obj1
 // console.log(Object.is(obj1, obj2)) // true
 
-let x = {
-    a: 3,
-    b: 4
-}
+// let x = {
+//     a: 3,
+//     b: 4
+// }
 // let y = {...x}
-let y = {
-    c: 5,
-    a: 6
-}
-// Object.assign(y, x)
+// let y = {
+//     c: 5,
+//     a: 6
+// }
+// // Object.assign(y, x)
 // console.log(y)
-console.log('a' in x)
-console.log('aa' in x)
+// console.log('a' in x)
+// console.log('aa' in x)
+
+let arr = [1, 2, 3]
+console.log(2 in arr)
