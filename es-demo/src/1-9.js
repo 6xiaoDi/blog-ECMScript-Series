@@ -59,6 +59,11 @@ let obj = {
 // for(let key in obj){
 //     console.log(key, obj[key])
 // }
-Object.keys(obj).forEach(key => {
+
+// Object.keys(obj).forEach(key => {
+//     console.log(key, obj[key])
+// })
+
+Object.getOwnPropertyNames(obj).forEach(key => {
     console.log(key, obj[key])
 })
