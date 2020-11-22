@@ -64,6 +64,10 @@ let obj = {
 //     console.log(key, obj[key])
 // })
 
-Object.getOwnPropertyNames(obj).forEach(key => {
+// Object.getOwnPropertyNames(obj).forEach(key => {
+//     console.log(key, obj[key])
+// })
+
+Reflect.ownKeys(obj).forEach(key => {
     console.log(key, obj[key])
 })
