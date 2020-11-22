@@ -56,7 +56,7 @@
 
 // 检查类型
 let checkType = data => {
-    console.log(Object.prototype.toString.call(data))
+    console.log(Object.prototype.toString.call(data).slice(8, -1))
 }
 checkType({})
 checkType([])
