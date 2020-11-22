@@ -56,6 +56,9 @@ let obj = {
     age: 30,
     school: 'beida'
 }
-for(let key in obj){
+// for(let key in obj){
+//     console.log(key, obj[key])
+// }
+Object.keys(obj).forEach(key => {
     console.log(key, obj[key])
-}
+})
