@@ -36,9 +36,15 @@
 //     this.name = name
 //     this.age = age
 // }
-let People = (name, age) => {
-    this.name = name
-    this.age = age
+// let People = (name, age) => {
+//     this.name = name
+//     this.age = age
+// }
+// let p1 = new People('zhangsan', 30)
+// console.log(p1)
+
+let foo = (...args) => {
+    console.log(arguments)
+    console.log(args)
 }
-let p1 = new People('zhangsan', 30)
-console.log(p1)
+foo(1, 2, 3)
