@@ -4,6 +4,7 @@ class People {
         this.age = age
         this._sex = -1
     }
+    static count = 0
     get sex() { // 属性
         if (this._sex === 1) {
             return 'male'
@@ -26,6 +27,7 @@ class People {
         return 5
     }
 }
+
 let p1 = new People('zhangsan', 30)
 console.log(p1)
 p1.sex = 5
