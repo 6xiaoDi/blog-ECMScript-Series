@@ -34,8 +34,16 @@
 // const y = Symbol.for('foo')
 // console.log(x === y) // true
 
-const s1 = Symbol('foo')
-console.log(Symbol.keyFor(s1)) // undefined
+// const s1 = Symbol('foo')
+// console.log(Symbol.keyFor(s1)) // undefined
 
-const s2 = Symbol.for('foo')
-console.log(Symbol.keyFor(s2)) // foo
+// const s2 = Symbol.for('foo')
+// console.log(Symbol.keyFor(s2)) // foo
+
+// 班级信息
+const grade = {
+    张三: {address: 'xxx', tel: '111'},
+    李四: {address: 'yyy', tel: '222'},
+    李四: {address: 'zzz', tel: '333'},
+}
+console.log(grade)
