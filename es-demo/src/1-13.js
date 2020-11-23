@@ -4,7 +4,6 @@ class People {
         this.age = age
         this._sex = -1
     }
-    static count = 0
     get sex() { // 属性
         if (this._sex === 1) {
             return 'male'
@@ -28,6 +27,11 @@ class People {
     }
 }
 
+// 静态属性
+People.count = 9
+console.log(People.count)
+console.log(typeof People) // function
+
 let p1 = new People('zhangsan', 30)
 console.log(p1)
 p1.sex = 5
@@ -43,6 +47,8 @@ class Coder extends People {
         console.log(this.company)
     }
 }
+
+console.log(Coder.count)
 
 let c1 = new Coder('lisi', 25, 'Tecent')
 console.log(c1)
