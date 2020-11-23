@@ -37,8 +37,8 @@
 // console.log(s)
 
 // 合并去重 set->array
-let arr1 = [1, 2, 3, 4]
-let arr2 = [2, 3, 4, 5, 6]
+// let arr1 = [1, 2, 3, 4]
+// let arr2 = [2, 3, 4, 5, 6]
 // let s = new Set([...arr1, ...arr2])
 // console.log(s)
 // Set转为数组（两种方法）
@@ -46,14 +46,30 @@ let arr2 = [2, 3, 4, 5, 6]
 // console.log(Array.from(s))
 
 // 交集
-let s1 = new Set(arr1)
-let s2 = new Set(arr2)
+// let s1 = new Set(arr1)
+// let s2 = new Set(arr2)
 // let result = new Set(arr1.filter(item => s2.has(item)))
 // console.log(Array.from(result))
 
 // 差集
-let arr3 = new Set(arr1.filter(item => !s2.has(item)))
-let arr4 = new Set(arr2.filter(item => !s1.has(item)))
-console.log(arr3)
-console.log(arr4)
-console.log([...arr3, ...arr4])
+// let arr3 = new Set(arr1.filter(item => !s2.has(item)))
+// let arr4 = new Set(arr2.filter(item => !s1.has(item)))
+// console.log(arr3)
+// console.log(arr4)
+// console.log([...arr3, ...arr4])
+
+// WeakSet
+let ws = new WeakSet()
+const obj1 = {
+    name: 'lisi'
+}
+const obj2 = {
+    age: 25
+}
+ws.add(obj1)
+ws.add(obj2)
+console.log(ws)
+
+ws.delete(obj1)
+console.log(ws)
+console.log(ws.has(obj2))
