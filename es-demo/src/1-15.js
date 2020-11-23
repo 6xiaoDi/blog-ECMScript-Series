@@ -73,3 +73,5 @@ console.log(ws)
 ws.delete(obj1)
 console.log(ws)
 console.log(ws.has(obj2))
+
+ws.forEach(item => console.log(item))
