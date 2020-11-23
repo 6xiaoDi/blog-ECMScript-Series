@@ -13,4 +13,9 @@ let map = new Map([
     ['name', 'lisi'],
     ['age', 5]
 ])
+console.log(map.size)
+console.log(map.has('name'))
+console.log(map.get('age'))
+map.set('name', 'zhangsan')
 console.log(map)
+

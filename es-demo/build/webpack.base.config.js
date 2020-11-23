@@ -27,13 +27,7 @@ module.exports = {
                         ['@babel/preset-env', {
                             "useBuiltIns": "usage"
                         }]
-                    ],
-                    plugins: [[
-                        '@babel/plugin-transform-runtime',
-                        {
-                            corejs: { version: 3 } // 指定 runtime-corejs 的版本，目前有 2 3 两个版本
-                        }
-                    ]]
+                    ]
                 }
             }
         }]
