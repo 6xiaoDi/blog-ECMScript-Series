@@ -56,13 +56,25 @@
 // }
 // console.log(grade)
 
-const stu1 = Symbol('李四')
-const stu2 = Symbol('李四')
-const grade = {
-    [stu1]: {address: 'yyy', tel: '222'},
-    [stu2]: {address: 'zzz', tel: '333'},
-}
-console.log(grade)
-console.log(grade[stu1])
-console.log(grade[stu2])
+// const stu1 = Symbol('李四')
+// const stu2 = Symbol('李四')
+// const grade = {
+//     [stu1]: {address: 'yyy', tel: '222'},
+//     [stu2]: {address: 'zzz', tel: '333'},
+// }
+// console.log(grade)
+// console.log(grade[stu1])
+// console.log(grade[stu2])
 
+const sym = Symbol('abc')
+class User {
+    constructor(name) {
+        this.name = name
+        this[sym] = '@abc.com'
+    }
+    getName() {
+        return this.name + this[sym]
+    }
+}
+const user = new User('lisi')
+console.log(user.getName())
