@@ -40,4 +40,10 @@ let map = new Map([
 
 // weakmap
 let wm = new WeakMap()
-wm.set(1, 2)
+// wm.set(1, 2)
+wm.set([1], 2)
+wm.set({
+    name: 'lisi'
+}, 'es')
+console.log(wm)
+console.log(wm.size)
