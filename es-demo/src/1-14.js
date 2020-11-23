@@ -87,6 +87,10 @@ const user = new User('lisi')
 //     console.log(key)
 // }
 
-for(let key of Object.getOwnPropertySymbols(user)){
+// for(let key of Object.getOwnPropertySymbols(user)){
+//     console.log(key)
+// }
+
+for(let key of Reflect.ownKeys(user)){
     console.log(key)
 }
