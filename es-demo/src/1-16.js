@@ -39,11 +39,16 @@ let map = new Map([
 // }
 
 // weakmap
+// let wm = new WeakMap()
+// // wm.set(1, 2)
+// wm.set([1], 2)
+// wm.set({
+//     name: 'lisi'
+// }, 'es')
+// console.log(wm)
+// console.log(wm.size)
+
 let wm = new WeakMap()
-// wm.set(1, 2)
-wm.set([1], 2)
-wm.set({
-    name: 'lisi'
-}, 'es')
-console.log(wm)
-console.log(wm.size)
+let elem = document.getElementsByTagName('h1')
+wm.set(elem, 'info')
+console.log(wm.get(elem))
