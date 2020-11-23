@@ -79,6 +79,10 @@ class User {
 const user = new User('lisi')
 // console.log(user.getName())
 
-for(let key in user){
+// for(let key in user){
+//     console.log(key)
+// }
+
+for(let key of Object.keys(user)){
     console.log(key)
 }
