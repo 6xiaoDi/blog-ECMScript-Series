@@ -91,6 +91,20 @@ const user = new User('lisi')
 //     console.log(key)
 // }
 
-for(let key of Reflect.ownKeys(user)){
-    console.log(key)
+// for(let key of Reflect.ownKeys(user)){
+//     console.log(key)
+// }
+
+function getArea(shape) {
+    let area = 0
+    switch (shape) {
+        case 'Triangle':
+            area = 1
+            break
+        case 'Circle':
+            area = 2
+            break
+    }
+    return area
 }
+console.log(getArea('Triangle'))
