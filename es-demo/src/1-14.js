@@ -19,6 +19,5 @@
 // let s = Symbol(obj)
 // console.log(s)
 
-let s = Symbol()
-s.name = 'abc'
-console.log(s)
+let s = Symbol('foo')
+console.log(s.description)
