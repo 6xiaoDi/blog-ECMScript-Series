@@ -21,11 +21,16 @@ class People {
     showName() {
         console.log(this.name)
     }
+    // 静态方法
+    static getCount() {
+        return 5
+    }
 }
 let p1 = new People('zhangsan', 30)
 console.log(p1)
 p1.sex = 5
 console.log(p1.sex)
+console.log(People.getCount())
 
 class Coder extends People {
     constructor(name, age, company) {
@@ -43,3 +48,4 @@ c1.showName()
 c1.showCompany()
 c1.sex = 1
 console.log(c1.sex)
+console.log(Coder.getCount())
