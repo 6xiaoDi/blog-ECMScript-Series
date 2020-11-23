@@ -11,7 +11,10 @@
 // console.log(s1 === s2)// false
 
 const obj = {
-    name: 'lisi'
+    name: 'lisi',
+    toString() {
+        return this.name
+    }
 }
 let s = Symbol(obj)
 console.log(s)
