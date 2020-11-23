@@ -27,9 +27,15 @@
 // console.log(s1.description)
 // console.log(s1 === s2) // true
 
-function foo() {
-    return Symbol.for('foo')
-}
-const x = foo()
-const y = Symbol.for('foo')
-console.log(x === y) // true
+// function foo() {
+//     return Symbol.for('foo')
+// }
+// const x = foo()
+// const y = Symbol.for('foo')
+// console.log(x === y) // true
+
+const s1 = Symbol('foo')
+console.log(Symbol.keyFor(s1)) // undefined
+
+const s2 = Symbol.for('foo')
+console.log(Symbol.keyFor(s2)) // foo
