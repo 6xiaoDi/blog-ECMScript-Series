@@ -95,16 +95,34 @@ const user = new User('lisi')
 //     console.log(key)
 // }
 
+// function getArea(shape) {
+//     let area = 0
+//     switch (shape) {
+//         case 'Triangle':
+//             area = 1
+//             break
+//         case 'Circle':
+//             area = 2
+//             break
+//     }
+//     return area
+// }
+// console.log(getArea('Triangle'))
+
+const shapeType = {
+    triangle: Symbol(),
+    circle: Symbol()
+}
 function getArea(shape) {
     let area = 0
     switch (shape) {
-        case 'Triangle':
+        case shapeType.triangle:
             area = 1
             break
-        case 'Circle':
+        case shapeType.circle:
             area = 2
             break
     }
     return area
 }
-console.log(getArea('Triangle'))
+console.log(getArea(shapeType.triangle))
