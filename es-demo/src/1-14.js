@@ -83,6 +83,10 @@ const user = new User('lisi')
 //     console.log(key)
 // }
 
-for(let key of Object.keys(user)){
+// for(let key of Object.keys(user)){
+//     console.log(key)
+// }
+
+for(let key of Object.getOwnPropertySymbols(user)){
     console.log(key)
 }
