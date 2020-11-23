@@ -22,7 +22,14 @@
 // let s = Symbol('foo')
 // console.log(s.description)
 
-let s1 = Symbol.for('foo')
-let s2 = Symbol.for('foo')
-console.log(s1.description)
-console.log(s1 === s2) // true
+// let s1 = Symbol.for('foo')
+// let s2 = Symbol.for('foo')
+// console.log(s1.description)
+// console.log(s1 === s2) // true
+
+function foo() {
+    return Symbol.for('foo')
+}
+const x = foo()
+const y = Symbol.for('foo')
+console.log(x === y) // true
