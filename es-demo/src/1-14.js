@@ -19,5 +19,10 @@
 // let s = Symbol(obj)
 // console.log(s)
 
-let s = Symbol('foo')
-console.log(s.description)
+// let s = Symbol('foo')
+// console.log(s.description)
+
+let s1 = Symbol.for('foo')
+let s2 = Symbol.for('foo')
+console.log(s1.description)
+console.log(s1 === s2) // true
