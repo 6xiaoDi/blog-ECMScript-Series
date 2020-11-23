@@ -20,20 +20,24 @@ let map = new Map([
 // console.log(map)
 
 // 遍历
-map.forEach((value, key) => console.log(value, key))
+// map.forEach((value, key) => console.log(value, key))
 
-for(let [key, value] of map){
-    console.log(key, value)
-}
+// for(let [key, value] of map){
+//     console.log(key, value)
+// }
 
-for(let key of map.keys()){
-    console.log(key)
-}
+// for(let key of map.keys()){
+//     console.log(key)
+// }
 
-for(let value of map.values()){
-    console.log(value)
-}
+// for(let value of map.values()){
+//     console.log(value)
+// }
 
-for(let [key, value] of map.entries()){
-    console.log(key, value)
-}
+// for(let [key, value] of map.entries()){
+//     console.log(key, value)
+// }
+
+// weakmap
+let wm = new WeakMap()
+wm.set(1, 2)
