@@ -41,9 +41,17 @@
 // console.log(Symbol.keyFor(s2)) // foo
 
 // 班级信息
+// const grade = {
+//     张三: {address: 'xxx', tel: '111'},
+//     李四: {address: 'yyy', tel: '222'},
+//     李四: {address: 'zzz', tel: '333'},
+// }
+// console.log(grade)
+
+const stu1 = '李四'
+const stu2 = '李四'
 const grade = {
-    张三: {address: 'xxx', tel: '111'},
-    李四: {address: 'yyy', tel: '222'},
-    李四: {address: 'zzz', tel: '333'},
+    [stu1]: {address: 'yyy', tel: '222'},
+    [stu2]: {address: 'zzz', tel: '333'},
 }
 console.log(grade)
