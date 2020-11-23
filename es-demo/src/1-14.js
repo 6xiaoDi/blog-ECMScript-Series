@@ -77,4 +77,8 @@ class User {
     }
 }
 const user = new User('lisi')
-console.log(user.getName())
+// console.log(user.getName())
+
+for(let key in user){
+    console.log(key)
+}
