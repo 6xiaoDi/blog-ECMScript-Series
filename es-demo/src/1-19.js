@@ -8,8 +8,14 @@
 // console.log(parseInt(b, 2)) // 还有第二个参数，代表转为几进制
 
 // ES6 0B二进制  0O八进制
-const a = 0B0101
-console.log(a)
+// const a = 0B0101
+// console.log(a)
 
-const b = 0O777
-console.log(b)
+// const b = 0O777
+// console.log(b)
+
+console.log(Number.isFinite(5)) // true
+console.log(Number.isFinite(0.5)) // true
+console.log(Number.isFinite(Infinity)) // false
+console.log(Number.isFinite('abc')) // false
+console.log(Number.isFinite(true)) // false
