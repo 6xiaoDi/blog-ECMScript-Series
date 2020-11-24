@@ -14,8 +14,12 @@
 // const b = 0O777
 // console.log(b)
 
-console.log(Number.isFinite(5)) // true
-console.log(Number.isFinite(0.5)) // true
-console.log(Number.isFinite(Infinity)) // false
-console.log(Number.isFinite('abc')) // false
-console.log(Number.isFinite(true)) // false
+// console.log(Number.isFinite(5)) // true
+// console.log(Number.isFinite(0.5)) // true
+// console.log(Number.isFinite(Infinity)) // false
+// console.log(Number.isFinite('abc')) // false
+// console.log(Number.isFinite(true)) // false
+
+// NaN:not a number
+console.log(Number.isNaN(NaN)) // true
+console.log(Number.isNaN(15)) // false
