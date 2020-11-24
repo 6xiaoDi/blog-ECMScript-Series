@@ -14,5 +14,9 @@
 // console.log(reg2.exec(str)) // aaa
 
 const str = '\uD842\uDFB7' // 表示一个字符
-console.log(/^\uD842/.test(str)) // es5 true
-console.log(/^\uD842/u.test(str)) // es6 false
+// console.log(/^\uD842/.test(str)) // es5 true
+// console.log(/^\uD842/u.test(str)) // es6 false
+
+// .除了换行符以外的任意单个字符
+console.log(/^.$/.test(str)) // es5 false
+console.log(/^.$/u.test(str)) // es6 true
