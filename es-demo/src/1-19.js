@@ -29,5 +29,9 @@
 // console.log(window.parseInt(5.5))  // 5
 // console.log(window.parseFloat(5.5))  // 5.5
 
-console.log(Number.isInteger(5))    // true
-console.log(Number.isInteger(5.5)) // false
+// console.log(Number.isInteger(5))    // true
+// console.log(Number.isInteger(5.5)) // false
+
+console.log(0.1000000000000001)
+console.log(0.10000000000000001)
+console.log(0.10000000000000001 === 0.1) // true
