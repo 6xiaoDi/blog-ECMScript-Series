@@ -32,13 +32,25 @@
 // console.log(str5)
 
 // 嵌套模板
-const isLargeScreen = () => {
+// const isLargeScreen = () => {
     // 不用关心这里的逻辑
-    return true
-}
+//     return true
+// }
 // let class1 = 'icon'
 // class1 += isLargeScreen() ? ' icon-big':' icon-small'
 // console.log(class1)
 
-const class2 = `icon icon-${isLargeScreen()?'big':'small'}`
-console.log(class2)
+// const class2 = `icon icon-${isLargeScreen()?'big':'small'}`
+// console.log(class2)
+
+// 带标签的模板字符串
+const foo = (a, b, c, d) => {
+    console.log(a)
+    console.log(b)
+    console.log(c)
+    console.log(d)
+}
+foo(1, 2, 3, 4)
+const name = 'lisi'
+const age = 30
+foo`这是${name},他的年龄是${age}岁`
