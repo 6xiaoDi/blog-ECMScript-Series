@@ -24,7 +24,10 @@
 // console.log(Number.isNaN(NaN)) // true
 // console.log(Number.isNaN(15)) // false
 
-console.log(Number.parseInt(5.5))  // 5
-console.log(Number.parseFloat(5.5))  // 5.5
-console.log(window.parseInt(5.5))  // 5
-console.log(window.parseFloat(5.5))  // 5.5
+// console.log(Number.parseInt(5.5))  // 5
+// console.log(Number.parseFloat(5.5))  // 5.5
+// console.log(window.parseInt(5.5))  // 5
+// console.log(window.parseFloat(5.5))  // 5.5
+
+console.log(Number.isInteger(5))    // true
+console.log(Number.isInteger(5.5)) // false
