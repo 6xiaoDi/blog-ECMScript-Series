@@ -13,10 +13,16 @@
 // _aa_a找不到开头匹配a，则再从开头开始找了
 // console.log(reg2.exec(str)) // aaa
 
-const str = '\uD842\uDFB7' // 表示一个字符
+// const str = '\uD842\uDFB7' // 表示一个字符
 // console.log(/^\uD842/.test(str)) // es5 true
 // console.log(/^\uD842/u.test(str)) // es6 false
 
 // .除了换行符以外的任意单个字符
-console.log(/^.$/.test(str)) // es5 false
-console.log(/^.$/u.test(str)) // es6 true
+// console.log(/^.$/.test(str)) // es5 false
+// console.log(/^.$/u.test(str)) // es6 true
+
+console.log(/\u{61}/.test('a')) // false
+console.log(/\u{61}/u.test('a')) // true
+
+console.log(/𠮷{2}/.test('𠮷𠮷')) // false
+console.log(/𠮷{2}/u.test('𠮷𠮷')) // true
