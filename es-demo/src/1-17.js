@@ -44,13 +44,16 @@
 // console.log(class2)
 
 // 带标签的模板字符串
-const foo = (a, b, c, d) => {
-    console.log(a)
-    console.log(b)
-    console.log(c)
-    console.log(d)
-}
-foo(1, 2, 3, 4)
-const name = 'lisi'
-const age = 30
-foo`这是${name},他的年龄是${age}岁`
+// const foo = (a, b, c, d) => {
+//     console.log(a)
+//     console.log(b)
+//     console.log(c)
+//     console.log(d)
+// }
+// foo(1, 2, 3, 4)
+// const name = 'lisi'
+// const age = 30
+// foo`这是${name},他的年龄是${age}岁`
+
+console.log(String.fromCharCode(0x20BB7)) // ES5
+console.log(String.fromCodePoint(0x20BB7)) // ES6
