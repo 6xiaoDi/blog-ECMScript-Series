@@ -36,7 +36,9 @@ const isLargeScreen = () => {
     // 不用关心这里的逻辑
     return true
 }
-let class1 = 'icon'
-class1 += isLargeScreen() ? ' icon-big':' icon-small'
-console.log(class1)
+// let class1 = 'icon'
+// class1 += isLargeScreen() ? ' icon-big':' icon-small'
+// console.log(class1)
 
+const class2 = `icon icon-${isLargeScreen()?'big':'small'}`
+console.log(class2)
