@@ -55,5 +55,16 @@
 // const age = 30
 // foo`这是${name},他的年龄是${age}岁`
 
-console.log(String.fromCharCode(0x20BB7)) // ES5
-console.log(String.fromCodePoint(0x20BB7)) // ES6
+// console.log(String.fromCharCode(0x20BB7)) // ES5
+// console.log(String.fromCodePoint(0x20BB7)) // ES6
+
+// indexOf
+const str = 'abcdef'
+console.log(str.indexOf('cdef'))
+console.log(str.indexOf('acdef'))
+console.log(str.includes('cdef'))
+console.log(str.includes('acdef'))
+console.log(str.startsWith('abc'))
+console.log(str.endsWith('cdef'))
+const newStr = str.repeat(10)
+console.log(newStr)
