@@ -48,18 +48,31 @@
 // console.log(dict['abc'])
 
 // set
-let arr = []
-arr = new Proxy(arr, {
-    set(target, prop, val) {
-        if (typeof val === 'number') {
-            target[prop] = val
-            return true
-        } else {
-            return false
-        }
+// let arr = []
+// arr = new Proxy(arr, {
+//     set(target, prop, val) {
+//         if (typeof val === 'number') {
+//             target[prop] = val
+//             return true
+//         } else {
+//             return false
+//         }
+//     }
+// })
+// arr.push(5)
+// arr.push(6)
+// console.log(arr[0], arr[1], arr.length)
+
+// has
+let range = {
+    start: 1,
+    end: 5
+}
+
+range = new Proxy(range, {
+    has(target, prop){
+        return prop >= target.start && prop <= target.end
     }
 })
-arr.push(5)
-arr.push(6)
-console.log(arr[0], arr[1], arr.length)
-
+console.log(2 in range)
+console.log(9 in range)
