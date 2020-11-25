@@ -89,18 +89,41 @@
 //     console.log(key)
 // }
 
-let userinfo = {
-    username: 'lisi',
+// let userinfo = {
+//     username: 'lisi',
+//     age: 30,
+//     _password: '***'
+// }
+// userinfo = new Proxy(userinfo, {
+//     ownKeys(target) {
+//         return Object.keys(target).filter(key => !key.startsWith('_'))
+//     }
+// })
+
+// for (let key in userinfo) {
+//     console.log(key)
+// }
+// console.log(Object.keys(userinfo))
+
+let user = {
+    name: 'lisi',
     age: 30,
     _password: '***'
 }
-userinfo = new Proxy(userinfo, {
-    ownKeys(target) {
-        return Object.keys(target).filter(key => !key.startsWith('_'))
+user = new Proxy(user, {
+    get(target, prop) {
+        // 防止对私有属性的访问
+        if (prop.startsWith('_')) {
+            throw new Error('不可访问')
+        } else {
+            return target[prop]
+        }
     }
 })
 
-for (let key in userinfo) {
-    console.log(key)
-}
-console.log(Object.keys(userinfo))
+// get拦截
+console.log(user.age)
+console.log(user._password)
+
+
+
