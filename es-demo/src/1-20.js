@@ -35,15 +35,31 @@
 // console.log(arr[1])
 // console.log(arr[10])
 
-let dict = {
-    'hello': '你好',
-    'world': '世界'
-}
-dict = new Proxy(dict, {
-    get(target, prop) {
-        return prop in target ? target[prop] : prop
+// let dict = {
+//     'hello': '你好',
+//     'world': '世界'
+// }
+// dict = new Proxy(dict, {
+//     get(target, prop) {
+//         return prop in target ? target[prop] : prop
+//     }
+// })
+// console.log(dict['world'])
+// console.log(dict['abc'])
+
+// set
+let arr = []
+arr = new Proxy(arr, {
+    set(target, prop, val) {
+        if (typeof val === 'number') {
+            target[prop] = val
+            return true
+        } else {
+            return false
+        }
     }
 })
-console.log(dict['world'])
-console.log(dict['abc'])
+arr.push(5)
+arr.push(6)
+console.log(arr[0], arr[1], arr.length)
 
