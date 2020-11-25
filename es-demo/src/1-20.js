@@ -78,13 +78,29 @@
 // console.log(9 in range)
 
 // ownKeys
-let obj = {
-    name: 'lisi',
-    [Symbol('es')]: 'es6'
+// let obj = {
+//     name: 'lisi',
+//     [Symbol('es')]: 'es6'
+// }
+// console.log(Object.getOwnPropertyNames(obj))  // 非Symbol的键名
+// console.log(Object.getOwnPropertySymbols(obj))  // 仅Symbol的键名
+// console.log(Object.keys(obj))  // 非Symbol的键名
+// for(let key in obj){ //非Symbol的键名
+//     console.log(key)
+// }
+
+let userinfo = {
+    username: 'lisi',
+    age: 30,
+    _password: '***'
 }
-console.log(Object.getOwnPropertyNames(obj))  // 非Symbol的键名
-console.log(Object.getOwnPropertySymbols(obj))  // 仅Symbol的键名
-console.log(Object.keys(obj))  // 非Symbol的键名
-for(let key in obj){ //非Symbol的键名
+userinfo = new Proxy(userinfo, {
+    ownKeys(target) {
+        return Object.keys(target).filter(key => !key.startsWith('_'))
+    }
+})
+
+for (let key in userinfo) {
     console.log(key)
 }
+console.log(Object.keys(userinfo))
