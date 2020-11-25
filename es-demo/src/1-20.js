@@ -136,6 +136,10 @@ user = new Proxy(user, {
             delete target[prop]
             return true
         }
+    },
+    ownKeys(target) {
+        // 防止对私有属性的遍历
+        return Object.keys(target).filter(key => !key.startsWith('_'))
     }
 })
 
@@ -144,19 +148,23 @@ user = new Proxy(user, {
 // console.log(user._password)
 
 // set拦截
-user.age = 18
-console.log(user.age)
-try {
-    user._password = 'xxx'
-} catch(e){
-    console.log(e.message)
-}
+// user.age = 18
+// console.log(user.age)
+// try {
+//     user._password = 'xxx'
+// } catch(e){
+//     console.log(e.message)
+// }
 
 // 删除拦截
-try {
-    delete user.age
-    delete user._password
-} catch (e) {
-    console.log(e.message)
+// try {
+//     // delete user.age
+//     delete user._password
+// } catch (e) {
+//     console.log(e.message)
+// }
+// console.log(user.age)
+
+for(let key in user){
+    console.log(key)
 }
-console.log(user.age)
