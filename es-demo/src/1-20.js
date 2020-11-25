@@ -105,43 +105,43 @@
 // }
 // console.log(Object.keys(userinfo))
 
-let user = {
-    name: 'lisi',
-    age: 30,
-    _password: '***'
-}
-user = new Proxy(user, {
-    get(target, prop) {
-        // 防止对私有属性的访问
-        if (prop.startsWith('_')) {
-            throw new Error('不可访问')
-        } else {
-            return target[prop]
-        }
-    },
-    set(target, prop, val) {
-        // 防止对私有属性的设置
-        if (prop.startsWith('_')) {
-            throw new Error('不可访问')
-        } else {
-            target[prop] = val
-            return true
-        }
-    },
-    deleteProperty(target, prop) { // 拦截删除
-        // 防止对私有属性的删除
-        if (prop.startsWith('_')) {
-            throw new Error('不可删除')
-        } else {
-            delete target[prop]
-            return true
-        }
-    },
-    ownKeys(target) {
-        // 防止对私有属性的遍历
-        return Object.keys(target).filter(key => !key.startsWith('_'))
-    }
-})
+// let user = {
+//     name: 'lisi',
+//     age: 30,
+//     _password: '***'
+// }
+// user = new Proxy(user, {
+//     get(target, prop) {
+//         // 防止对私有属性的访问
+//         if (prop.startsWith('_')) {
+//             throw new Error('不可访问')
+//         } else {
+//             return target[prop]
+//         }
+//     },
+//     set(target, prop, val) {
+//         // 防止对私有属性的设置
+//         if (prop.startsWith('_')) {
+//             throw new Error('不可访问')
+//         } else {
+//             target[prop] = val
+//             return true
+//         }
+//     },
+//     deleteProperty(target, prop) { // 拦截删除
+//         // 防止对私有属性的删除
+//         if (prop.startsWith('_')) {
+//             throw new Error('不可删除')
+//         } else {
+//             delete target[prop]
+//             return true
+//         }
+//     },
+//     ownKeys(target) {
+//         // 防止对私有属性的遍历
+//         return Object.keys(target).filter(key => !key.startsWith('_'))
+//     }
+// })
 
 // get拦截
 // console.log(user.age)
@@ -165,6 +165,25 @@ user = new Proxy(user, {
 // }
 // console.log(user.age)
 
-for(let key in user){
-    console.log(key)
+// for(let key in user){
+//     console.log(key)
+// }
+
+// apply
+let sum = (...args) => {
+    let num = 0
+    args.forEach(item => {
+        num += item
+    })
+    return num
 }
+
+// 代理函数
+sum = new Proxy(sum, {
+    apply(target, ctx, args) {
+        return target(...args) * 2
+    }
+})
+console.log(sum(1, 2))
+console.log(sum.call(null, 1, 2, 3))
+console.log(sum.apply(null, [1, 2, 3]))
