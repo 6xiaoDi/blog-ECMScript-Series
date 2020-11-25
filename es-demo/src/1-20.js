@@ -118,12 +118,45 @@ user = new Proxy(user, {
         } else {
             return target[prop]
         }
+    },
+    set(target, prop, val) {
+        // 防止对私有属性的设置
+        if (prop.startsWith('_')) {
+            throw new Error('不可访问')
+        } else {
+            target[prop] = val
+            return true
+        }
+    },
+    deleteProperty(target, prop) { // 拦截删除
+        // 防止对私有属性的删除
+        if (prop.startsWith('_')) {
+            throw new Error('不可删除')
+        } else {
+            delete target[prop]
+            return true
+        }
     }
 })
 
 // get拦截
+// console.log(user.age)
+// console.log(user._password)
+
+// set拦截
+user.age = 18
 console.log(user.age)
-console.log(user._password)
+try {
+    user._password = 'xxx'
+} catch(e){
+    console.log(e.message)
+}
 
-
-
+// 删除拦截
+try {
+    delete user.age
+    delete user._password
+} catch (e) {
+    console.log(e.message)
+}
+console.log(user.age)
