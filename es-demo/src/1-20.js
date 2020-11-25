@@ -64,15 +64,27 @@
 // console.log(arr[0], arr[1], arr.length)
 
 // has
-let range = {
-    start: 1,
-    end: 5
-}
+// let range = {
+//     start: 1,
+//     end: 5
+// }
 
-range = new Proxy(range, {
-    has(target, prop){
-        return prop >= target.start && prop <= target.end
-    }
-})
-console.log(2 in range)
-console.log(9 in range)
+// range = new Proxy(range, {
+//     has(target, prop){
+//         return prop >= target.start && prop <= target.end
+//     }
+// })
+// console.log(2 in range)
+// console.log(9 in range)
+
+// ownKeys
+let obj = {
+    name: 'lisi',
+    [Symbol('es')]: 'es6'
+}
+console.log(Object.getOwnPropertyNames(obj))  // 非Symbol的键名
+console.log(Object.getOwnPropertySymbols(obj))  // 仅Symbol的键名
+console.log(Object.keys(obj))  // 非Symbol的键名
+for(let key in obj){ //非Symbol的键名
+    console.log(key)
+}
