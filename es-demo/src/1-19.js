@@ -56,9 +56,12 @@
 // console.log(Number.parseInt(-5.5)) // -5
 // console.log(Number.parseInt(true)) // NaN
 
-console.log(Math.sign(5)) // 1
-console.log(Math.sign(-5)) // -1
-console.log(Math.sign(0)) // 0
-console.log(Math.sign(NaN)) // NaN
-console.log(Math.sign(true)) // 1
-console.log(Math.sign(false)) // 0
+// console.log(Math.sign(5)) // 1
+// console.log(Math.sign(-5)) // -1
+// console.log(Math.sign(0)) // 0
+// console.log(Math.sign(NaN)) // NaN
+// console.log(Math.sign(true)) // 1
+// console.log(Math.sign(false)) // 0
+
+console.log(Math.cbrt(8))  // 2
+console.log(Math.cbrt('abcde')) // NaN
