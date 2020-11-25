@@ -170,20 +170,34 @@
 // }
 
 // apply
-let sum = (...args) => {
-    let num = 0
-    args.forEach(item => {
-        num += item
-    })
-    return num
-}
+// let sum = (...args) => {
+//     let num = 0
+//     args.forEach(item => {
+//         num += item
+//     })
+//     return num
+// }
 
 // 代理函数
-sum = new Proxy(sum, {
-    apply(target, ctx, args) {
-        return target(...args) * 2
+// sum = new Proxy(sum, {
+//     apply(target, ctx, args) {
+//         return target(...args) * 2
+//     }
+// })
+// console.log(sum(1, 2))
+// console.log(sum.call(null, 1, 2, 3))
+// console.log(sum.apply(null, [1, 2, 3]))
+
+// construct  new
+let User = class {
+    constructor(name) {
+        this.name = name
+    }
+}
+User = new Proxy(User, {
+    construct(target, args, newTarget) {
+        console.log('construct')
+        return new target(...args)
     }
 })
-console.log(sum(1, 2))
-console.log(sum.call(null, 1, 2, 3))
-console.log(sum.apply(null, [1, 2, 3]))
+console.log(new User('zhangsan'))
