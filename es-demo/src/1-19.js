@@ -44,14 +44,21 @@
 // console.log(Number.isSafeInteger(Number.MAX_SAFE_INTEGER)) // true
 // console.log(Number.isSafeInteger(Number.MAX_SAFE_INTEGER + 1)) // false （超出范围，即不安全了）
 
-console.log(Math.trunc(5.5)) // 5
-console.log(Math.trunc(-5.5)) // -5
-console.log(Math.trunc(true)) // 1
-console.log(Math.trunc(false)) // 0
-console.log(Math.trunc(NaN)) // NaN
-console.log(Math.trunc(undefined)) // NaN
-console.log(Math.trunc()) // NaN
+// console.log(Math.trunc(5.5)) // 5
+// console.log(Math.trunc(-5.5)) // -5
+// console.log(Math.trunc(true)) // 1
+// console.log(Math.trunc(false)) // 0
+// console.log(Math.trunc(NaN)) // NaN
+// console.log(Math.trunc(undefined)) // NaN
+// console.log(Math.trunc()) // NaN
 
-console.log(Number.parseInt(5.5)) // 5
-console.log(Number.parseInt(-5.5)) // -5
-console.log(Number.parseInt(true)) // NaN
+// console.log(Number.parseInt(5.5)) // 5
+// console.log(Number.parseInt(-5.5)) // -5
+// console.log(Number.parseInt(true)) // NaN
+
+console.log(Math.sign(5)) // 1
+console.log(Math.sign(-5)) // -1
+console.log(Math.sign(0)) // 0
+console.log(Math.sign(NaN)) // NaN
+console.log(Math.sign(true)) // 1
+console.log(Math.sign(false)) // 0
