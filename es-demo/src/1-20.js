@@ -16,10 +16,21 @@
 // console.log(obj.name)
 
 // proxy
-let obj = {}
-let p = new Proxy(obj, {})
-p.name = 'lisi'
-console.log(obj.name)
-for(let key in obj){
-    console.log(key)
-}
+// let obj = {}
+// let p = new Proxy(obj, {})
+// p.name = 'lisi'
+// console.log(obj.name)
+// for(let key in obj){
+//     console.log(key)
+// }
+
+// get
+let arr = [7, 8, 9]
+arr = new Proxy(arr, {
+    get(target, prop) {
+        console.log(target, prop)
+        return prop in target ? target[prop] : 'error'
+    }
+})
+console.log(arr[1])
+console.log(arr[10])
