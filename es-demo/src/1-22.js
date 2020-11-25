@@ -41,3 +41,15 @@ function ajax(url, callback) {
 // ajax(url, res => {
 //     console.log(res)
 // })
+
+// 1 -> 2 -> 3
+// callback hell
+ajax('static/a.json', res => {
+    console.log(res)
+    ajax('static/b.json', res => {
+        console.log(res)
+        ajax('static/c.json', res => {
+            console.log(res)
+        })
+    })
+})
