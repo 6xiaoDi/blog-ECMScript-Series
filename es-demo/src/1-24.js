@@ -41,8 +41,8 @@ let p1 = new Promise((resolve, reject) => {
 let p2 = new Promise((resolve, reject) => {
     setTimeout(() => {
         console.log(2)
-        // resolve('2成功')
-        reject('2失败')
+        resolve('2成功')
+        // reject('2失败')
     }, 1000)
 })
 let p3 = new Promise((resolve, reject) => {
@@ -52,7 +52,13 @@ let p3 = new Promise((resolve, reject) => {
     }, 3000)
 })
 
-Promise.all([p1, p2, p3]).then(res => {
+// Promise.all([p1, p2, p3]).then(res => {
+//     console.log(res)
+// }, err => {
+//     console.log(err)
+// })
+
+Promise.race([p1, p2, p3]).then(res => {
     console.log(res)
 }, err => {
     console.log(err)
