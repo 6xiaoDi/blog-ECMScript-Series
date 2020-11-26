@@ -64,15 +64,43 @@
 //     console.log(err)
 // })
 
-const imgArr = ['1.jpg', '2.jpg', '3.jpg']
-let promiseArr = []
-imgArr.forEach(item => {
-    promiseArr.push(new Promise((resolve, reject) => {
-        // 图片上传的操作（省略）
-        resolve()
-    }))
-})
-Promise.all(promiseArr).then(res => {
-    // 插入数据库的操作
-    console.log('图片全部上传完成')
+// const imgArr = ['1.jpg', '2.jpg', '3.jpg']
+// let promiseArr = []
+// imgArr.forEach(item => {
+//     promiseArr.push(new Promise((resolve, reject) => {
+//         // 图片上传的操作（省略）
+//         resolve()
+//     }))
+// })
+// Promise.all(promiseArr).then(res => {
+//     // 插入数据库的操作
+//     console.log('图片全部上传完成')
+// })
+
+function getImg() {
+    // 图片加载是异步过程 放入promise
+    return new Promise((resolve, reject) => {
+        let img = new Image()
+        // 图片加载成功
+        img.onload = function () {
+            resolve(img)
+        }
+        img.src = 'http://www.xxx.com/xx.jpg'  // 失败的地址
+        // img.src = 'https://avatar.csdnimg.cn/8/1/4/3_u013946061.jpg'  // 成功的地址
+    })
+}
+
+function timeout() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            // 图片加载到时
+            reject('图片请求超时')
+        }, 2000)
+    })
+}
+
+Promise.race([getImg(), timeout()]).then(res => {
+    console.log(res)
+}).catch(err => {
+    console.log(err)
 })
