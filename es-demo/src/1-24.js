@@ -10,23 +10,48 @@
 //     console.log(err)
 // })
 
-function foo(flag) {
-    if (flag) {
-        return new Promise(resolve => {
-            // 异步操作
-            resolve('success')
-        })
-    } else {
-        // return 'fail'
-        return Promise.reject('fail')
-    }
-}
+// function foo(flag) {
+//     if (flag) {
+//         return new Promise(resolve => {
+//             // 异步操作
+//             resolve('success')
+//         })
+//     } else {
+//         // return 'fail'
+//         return Promise.reject('fail')
+//     }
+// }
+//
+// foo(true).then(res => {
+//     console.log(res)
+// })
+//
+// foo(false).then(res => {
+//     console.log(res)
+// }, err => {
+//     console.log(err)
+// })
 
-foo(true).then(res => {
-    console.log(res)
+let p1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        console.log(1)
+        resolve('1成功')
+    }, 2000)
+})
+let p2 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        console.log(2)
+        resolve('2成功')
+    }, 1000)
+})
+let p3 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        console.log(3)
+        resolve('3成功')
+    }, 3000)
 })
 
-foo(false).then(res => {
+Promise.all([p1, p2, p3]).then(res => {
     console.log(res)
 }, err => {
     console.log(err)
