@@ -85,8 +85,8 @@ function getImg() {
         img.onload = function () {
             resolve(img)
         }
-        img.src = 'http://www.xxx.com/xx.jpg'  // 失败的地址
-        // img.src = 'https://avatar.csdnimg.cn/8/1/4/3_u013946061.jpg'  // 成功的地址
+        // img.src = 'http://www.xxx.com/xx.jpg'  // 失败的地址
+        img.src = 'https://avatar.csdnimg.cn/8/1/4/3_u013946061.jpg'  // 成功的地址
     })
 }
 
