@@ -21,7 +21,12 @@ function* gen(x) {
     let z = yield(y / 3)
     return x + y + z
 }
+// let g = gen(5)
+// console.log(g.next()) // 6
+// console.log(g.next()) // NaN
+// console.log(g.next()) // NaN
+
 let g = gen(5)
 console.log(g.next()) // 6
-console.log(g.next()) // NaN
-console.log(g.next()) // NaN
+console.log(g.next(12)) // y=24  8
+console.log(g.next(13)) // z=13 x=5 42
