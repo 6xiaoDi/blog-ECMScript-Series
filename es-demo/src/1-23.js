@@ -134,16 +134,31 @@ function getPromise(url) {
 //         console.log(res)
 //     })
 
-getPromise('static/aa.json')
+// getPromise('static/aa.json')
+//     .then(res => {
+//         console.log(res)
+//         return getPromise('static/b.json')
+//     }, err => {
+//         console.log(err)
+//         return getPromise('static/b.json')
+//     }).then(res => {
+//         console.log(res)
+//         return getPromise('static/c.json')
+//     }).then(res => {
+//         console.log(res)
+//     })
+
+// getPromise('static/aa.json')
+getPromise('static/a.json')
     .then(res => {
         console.log(res)
-        return getPromise('static/b.json')
-    }, err => {
-        console.log(err)
+        // return getPromise('static/bb.json')
         return getPromise('static/b.json')
     }).then(res => {
-        console.log(res)
-        return getPromise('static/c.json')
-    }).then(res => {
-        console.log(res)
-    })
+    console.log(res)
+    return getPromise('static/c.json')
+}).then(res => {
+    console.log(res)
+}).catch(err => {
+    console.log(err)
+})
