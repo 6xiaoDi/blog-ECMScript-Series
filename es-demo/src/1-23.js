@@ -38,3 +38,20 @@ let p3 = new Promise((resolve, reject) => {
 console.log(p1) // resolved
 console.log(p2) // pending
 console.log(p3) // pending
+
+setTimeout(() => {
+    console.log(p2)
+}, 2000)
+setTimeout(() => {
+    console.log(p3)
+}, 2000)
+
+p1.then(res => {
+    console.log(res)
+})
+p2.then(res => {
+    console.log(res)
+})
+p3.catch(err => {
+    console.log(err)
+})
