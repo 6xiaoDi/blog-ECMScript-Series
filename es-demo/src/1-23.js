@@ -4,7 +4,8 @@
 let p = new Promise((resolve, reject) => {
     setTimeout(() => {
         console.log('123')
-        resolve('成功')
+        // resolve('成功')
+        reject('失败')
     }, 1000)
 }).then(res => {
     console.log(res)
