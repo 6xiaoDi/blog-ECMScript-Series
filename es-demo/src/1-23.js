@@ -13,11 +13,28 @@
 //     console.log(err)
 // })
 
-let p = new Promise((resolve, reject) => {
-    console.log(1)
-    resolve()
+// let p = new Promise((resolve, reject) => {
+//     console.log(1)
+//     resolve()
+// })
+// console.log(2)
+// p.then(res => {
+//     console.log(3)
+// })
+
+let p1 = new Promise((resolve, reject) => {
+    resolve(1)
 })
-console.log(2)
-p.then(res => {
-    console.log(3)
+let p2 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve(2)
+    }, 1000)
 })
+let p3 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        reject(3)
+    }, 1000)
+})
+console.log(p1) // resolved
+console.log(p2) // pending
+console.log(p3) // pending
