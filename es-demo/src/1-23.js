@@ -89,27 +89,47 @@ function ajax(url, successCallback, failCallback) {
     }
 }
 
-new Promise((resolve, reject) => {
-    ajax('static/a.json', res => {
+// new Promise((resolve, reject) => {
+//     ajax('static/a.json', res => {
+//         console.log(res)
+//         resolve()
+//     })
+// }).then(res => {
+//     console.log('a成功')
+//     return new Promise((resolve, reject) => {
+//         ajax('static/b.json', res => {
+//             console.log(res)
+//             resolve()
+//         })
+//     })
+// }).then(res => {
+//     console.log('b成功')
+//     return new Promise((resolve, reject) => {
+//         ajax('static/c.json', res => {
+//             console.log(res)
+//             resolve()
+//         })
+//     })
+// }).then(res => {
+//     console.log('c成功')
+// })
+
+function getPromise(url) {
+    return new Promise((resolve, reject) => {
+        ajax(url, res => {
+            resolve(res)
+        }, err => {
+            reject(err)
+        })
+    })
+}
+getPromise('static/a.json')
+    .then(res => {
         console.log(res)
-        resolve()
+        return getPromise('static/b.json')
+    }).then(res => {
+        console.log(res)
+        return getPromise('static/c.json')
+    }).then(res => {
+        console.log(res)
     })
-}).then(res => {
-    console.log('a成功')
-    return new Promise((resolve, reject) => {
-        ajax('static/b.json', res => {
-            console.log(res)
-            resolve()
-        })
-    })
-}).then(res => {
-    console.log('b成功')
-    return new Promise((resolve, reject) => {
-        ajax('static/c.json', res => {
-            console.log(res)
-            resolve()
-        })
-    })
-}).then(res => {
-    console.log('c成功')
-})
