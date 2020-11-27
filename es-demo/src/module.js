@@ -42,6 +42,6 @@ function sum(x, y) {
 }
 export default sum
 
-
+export const str = 'abc'
 
 

@@ -14,5 +14,5 @@
 // import aa from './module'
 // console.log(aa)
 
-import add from './module'
-console.log(add(4, 5))
+import add, {str} from './module'
+console.log(add(4, 5), str)
