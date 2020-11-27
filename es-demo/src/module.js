@@ -6,26 +6,29 @@
 // }
 // export {obj}
 
+// const a = 5
+// const b = 'QACC'
+// const sum = (x, y) => x + y
+// const obj = {
+//     name: 'es'
+// }
+//
+// class People {
+//     constructor(name) {
+//         this.name = name
+//     }
+//     showName() {
+//         console.log(this.name)
+//     }
+// }
+//
+// export {
+//     a,
+//     b,
+//     sum,
+//     obj,
+//     People
+// }
+
 const a = 5
-const b = 'QACC'
-const sum = (x, y) => x + y
-const obj = {
-    name: 'es'
-}
-
-class People {
-    constructor(name) {
-        this.name = name
-    }
-    showName() {
-        console.log(this.name)
-    }
-}
-
-export {
-    a,
-    b,
-    sum,
-    obj,
-    People
-}
+export default a
