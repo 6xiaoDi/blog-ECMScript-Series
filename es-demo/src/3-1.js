@@ -12,14 +12,14 @@
 function timeout() {
     return new Promise(resolve => {
         setTimeout(()=>{
-            console.log(1)
-            resolve()
+            resolve(1)
         }, 1000)
     })
 }
 
 async function foo(){
-    await timeout()
+    const res = await timeout()
+    console.log(res)
     console.log(2)
 }
 foo()
