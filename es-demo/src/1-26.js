@@ -30,10 +30,22 @@ let courses = {
 //     console.log(c)
 // }
 
-let arr = ['a', 'b', 'c']
-console.log(arr)
-let it = arr[Symbol.iterator]()
+// let arr = ['a', 'b', 'c']
+// console.log(arr)
+// let it = arr[Symbol.iterator]()
+// console.log(it.next())
+// console.log(it.next())
+// console.log(it.next())
+// console.log(it.next())
+
+let map = new Map()
+map.set('name', 'es')
+map.set('age', 5)
+map.set('school', 'QH')
+console.log(map)
+let it = map[Symbol.iterator]()
 console.log(it.next())
 console.log(it.next())
 console.log(it.next())
 console.log(it.next())
+
