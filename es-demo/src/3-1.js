@@ -3,8 +3,23 @@
 // }
 // console.log(foo())
 
-async function foo() {
-    let result = await 'hello'
-    console.log(result)
+// async function foo() {
+//     let result = await 'hello'
+//     console.log(result)
+// }
+// foo()
+
+function timeout() {
+    return new Promise(resolve => {
+        setTimeout(()=>{
+            console.log(1)
+            resolve()
+        }, 1000)
+    })
+}
+
+async function foo(){
+    timeout()
+    console.log(2)
 }
 foo()
