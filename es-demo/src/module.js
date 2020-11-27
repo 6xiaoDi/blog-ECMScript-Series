@@ -30,8 +30,11 @@
 //     People
 // }
 
-const a = 5
-export default a
-const b = 'QACC'
-export default b
+// const a = 5
+// export default a
+// const b = 'QACC'
+// export default b
+
+export default const a = 5 // 错误
+
 
