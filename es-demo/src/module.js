@@ -37,11 +37,33 @@
 
 // export default const a = 5 // 错误
 
-function sum(x, y) {
-    return x + y
-}
-export default sum
+// function sum(x, y) {
+//     return x + y
+// }
+// export default sum
+//
+// export const str = 'abc'
 
-export const str = 'abc'
+const a = 5
+const b = 'abc'
+const sum = (x, y) => x + y
+const obj = {
+    name: 'es'
+}
+class People {
+    constructor(name) {
+        this.name = name
+    }
+    showName() {
+        console.log(this.name)
+    }
+}
+export default {
+    a,
+    b,
+    sum,
+    obj,
+    People
+}
 
 

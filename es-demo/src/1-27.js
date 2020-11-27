@@ -14,5 +14,11 @@
 // import aa from './module'
 // console.log(aa)
 
-import add, {str} from './module'
-console.log(add(4, 5), str)
+// import add, {str} from './module'
+// console.log(add(4, 5), str)
+
+import mod from './module'
+console.log(mod.a)
+console.log(mod.b)
+console.log(mod.obj)
+console.log(mod.sum(7, 8))
