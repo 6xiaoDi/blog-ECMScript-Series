@@ -10,6 +10,10 @@
 // console.log(arr.indexOf('es7'))
 // console.log(arr.indexOf('es7') > -1)
 
-const arr = ['es6', ['es7', 'es8'], 'es9']
-console.log(arr.includes(['es7', 'es8'])) // false
-console.log(arr.indexOf(['es7', 'es8'])) // -1
+// const arr = ['es6', ['es7', 'es8'], 'es9']
+// console.log(arr.includes(['es7', 'es8'])) // false
+// console.log(arr.indexOf(['es7', 'es8'])) // -1
+
+const arr = ['es6', 'es7', NaN, 'es8', 2]
+console.log(arr.includes(NaN)) // true
+console.log(arr.indexOf(NaN)) // -1
