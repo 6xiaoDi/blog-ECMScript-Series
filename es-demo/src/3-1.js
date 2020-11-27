@@ -1,4 +1,10 @@
-async function foo(){
-    return 'hello' // Promise.resolve('hello')
+// async function foo(){
+//     return 'hello' // Promise.resolve('hello')
+// }
+// console.log(foo())
+
+async function foo() {
+    let result = await 'hello'
+    console.log(result)
 }
-console.log(foo())
+foo()
