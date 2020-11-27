@@ -13,9 +13,19 @@ const obj = {
     name: 'es'
 }
 
+class People {
+    constructor(name) {
+        this.name = name
+    }
+    showName() {
+        console.log(this.name)
+    }
+}
+
 export {
     a,
     b,
     sum,
-    obj
+    obj,
+    People
 }
