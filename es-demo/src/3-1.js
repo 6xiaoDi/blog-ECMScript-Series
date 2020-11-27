@@ -19,7 +19,7 @@ function timeout() {
 }
 
 async function foo(){
-    timeout()
+    await timeout()
     console.log(2)
 }
 foo()
