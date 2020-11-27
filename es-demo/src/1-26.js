@@ -26,6 +26,14 @@ let courses = {
     }
 }
 
-for(let c of courses){
-    console.log(c)
-}
+// for(let c of courses){
+//     console.log(c)
+// }
+
+let arr = ['a', 'b', 'c']
+console.log(arr)
+let it = arr[Symbol.iterator]()
+console.log(it.next())
+console.log(it.next())
+console.log(it.next())
+console.log(it.next())
