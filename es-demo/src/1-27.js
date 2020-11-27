@@ -11,5 +11,8 @@
 // let p = new People('lisi')
 // p.showName()
 
-import aa from './module'
-console.log(aa)
+// import aa from './module'
+// console.log(aa)
+
+import add from './module'
+console.log(add(4, 5))

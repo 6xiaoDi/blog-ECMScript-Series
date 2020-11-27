@@ -35,6 +35,13 @@
 // const b = 'QACC'
 // export default b
 
-export default const a = 5 // 错误
+// export default const a = 5 // 错误
+
+function sum(x, y) {
+    return x + y
+}
+export default sum
+
+
 
 
