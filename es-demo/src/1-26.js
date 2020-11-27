@@ -49,22 +49,46 @@ let courses = {
     }
 }
 
-courses[Symbol.iterator] = function () {
+// courses[Symbol.iterator] = function () {
+//     let allCourse = this.allCourse
+//     let keys = Reflect.ownKeys(allCourse)
+//     let values = []
+//     return {
+//         next() {
+//             if (!values.length) {
+//                 if (keys.length) {
+//                     values = allCourse[keys[0]]
+//                     keys.shift()
+//                 }
+//             }
+//             return {
+//                 done: !values.length,
+//                 value: values.shift()
+//             }
+//         }
+//     }
+// }
+
+// for (let c of courses) {
+//     console.log(c)
+// }
+
+courses[Symbol.iterator] = function* () {
     let allCourse = this.allCourse
     let keys = Reflect.ownKeys(allCourse)
     let values = []
-    return {
-        next() {
-            if (!values.length) {
-                if (keys.length) {
-                    values = allCourse[keys[0]]
-                    keys.shift()
-                }
+    while (1) {
+        if (!values.length) {
+            if (keys.length) {
+                values = allCourse[keys[0]]
+                keys.shift()
+                yield values.shift()
+            } else {
+                // 遍历完毕后，退出
+                return false
             }
-            return {
-                done: !values.length,
-                value: values.shift()
-            }
+        }else{
+            yield values.shift()
         }
     }
 }
