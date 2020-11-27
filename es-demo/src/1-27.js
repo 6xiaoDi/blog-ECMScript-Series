@@ -1,2 +1,2 @@
-import {a} from './module'
-console.log(a)
+import {aa} from './module'
+console.log(aa)
