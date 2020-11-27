@@ -27,4 +27,5 @@
 // import './1-25'
 // import './1-26'
 // import './1-27'
-import './2-1'
+// import './2-1'
+import './2-2'
