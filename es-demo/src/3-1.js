@@ -9,17 +9,33 @@
 // }
 // foo()
 
+// function timeout() {
+//     return new Promise(resolve => {
+//         setTimeout(()=>{
+//             resolve(1)
+//         }, 1000)
+//     })
+// }
+
+// async function foo(){
+//     const res = await timeout()
+//     console.log(res)
+//     console.log(2)
+// }
+// foo()
+
 function timeout() {
-    return new Promise(resolve => {
-        setTimeout(()=>{
-            resolve(1)
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            reject('fail')
         }, 1000)
     })
 }
-
-async function foo(){
-    const res = await timeout()
-    console.log(res)
-    console.log(2)
+async function foo() {
+    return await timeout()
 }
-foo()
+foo().then(res => {
+    console.log(res);
+}).catch(err => {
+    console.log(err)
+})
