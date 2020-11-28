@@ -23,8 +23,12 @@
 // console.log(date[2])  // 月
 // console.log(date[3])  // 日
 
-const reg = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/
-console.log(reg.exec('2020-02-01'))
-const groups = reg.exec('2020-02-01').groups
-const {year, month, day} = groups
-console.log(year, month, day)
+// const reg = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/
+// console.log(reg.exec('2020-02-01'))
+// const groups = reg.exec('2020-02-01').groups
+// const {year, month, day} = groups
+// console.log(year, month, day)
+
+//  先行断言（es5）
+const str = 'ecmascript'
+console.log(str.match(/ecma(?=script)/))
