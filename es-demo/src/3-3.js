@@ -30,3 +30,5 @@ for(let key in obj){
     console.log(key)
 }
 
+console.log(Object.getOwnPropertyDescriptors(obj))
+console.log(Object.getOwnPropertyDescriptor(obj, 'age'))
