@@ -30,5 +30,5 @@
 // console.log(year, month, day)
 
 //  先行断言（es5）
-const str = 'ecmascript'
+const str = 'ecmaXXXscript'
 console.log(str.match(/ecma(?=script)/))
