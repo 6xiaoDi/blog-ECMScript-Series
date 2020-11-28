@@ -17,3 +17,5 @@ const foo = arg => {
 }
 // foo`\u{61} and \u{62}`
 foo`\u{61} and \unicode`
+
+let str = `\u{61} and \unicode`
