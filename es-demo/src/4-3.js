@@ -30,7 +30,7 @@ const obj1 = {
     course: 'es'
 }
 
-const {name, ...rest, age} = obj1
+const {name, age, ...rest} = obj1
 console.log(name)
 console.log(age)
 console.log(rest)
