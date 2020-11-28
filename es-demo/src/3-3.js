@@ -17,4 +17,6 @@ Reflect.defineProperty(obj, 'name', {
 console.log(obj)
 obj.name = 'zhangsan'
 console.log(obj)
+delete obj.name
+console.log(obj)
 
