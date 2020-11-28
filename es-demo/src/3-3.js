@@ -9,7 +9,7 @@
 const obj = {}
 Reflect.defineProperty(obj, 'name', {
     value: 'lisi',
-    writable: false,
+    writable: true,
     configurable: false,
     enumerable: false
 })
