@@ -7,10 +7,18 @@ const obj1 = {
     name: 'lisi',
     age: 24
 }
+const obj2 = {
+    school: 'QH',
+    age: 18
+}
 
 // 克隆对象
-const obj3 = {
-    ...obj1
-}
-obj1.age = 18
-console.log(obj3)
+// const obj3 = {
+//     ...obj1
+// }
+// obj1.age = 18
+// console.log(obj3)
+
+// 合并对象
+const obj4 = {...obj1, ...obj2}
+console.log(obj4)
