@@ -15,4 +15,5 @@
 const foo = arg => {
     console.log(arg)
 }
-foo`\u{61} and \u{62}`
+// foo`\u{61} and \u{62}`
+foo`\u{61} and \unicode`
