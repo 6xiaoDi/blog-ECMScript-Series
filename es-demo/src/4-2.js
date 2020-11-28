@@ -30,5 +30,9 @@
 // console.log(year, month, day)
 
 //  先行断言（es5）
-const str = 'ecmascript123'
-console.log(str.match(/ecma(?=script)/))
+// const str = 'ecmascript123'
+const str = 'ecmaXscript'
+// console.log(str.match(/ecma(?=script)/))
+// es9:后行断言
+console.log(str.match(/(?<=ecma)script/))
+console.log(str.match(/(?<!ecma)script/))
