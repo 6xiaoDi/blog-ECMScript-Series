@@ -13,10 +13,20 @@ Reflect.defineProperty(obj, 'name', {
     configurable: true,
     enumerable: false
 })
+Reflect.defineProperty(obj, 'age', {
+    value: 34,
+    writable: true,
+    configurable: true,
+    enumerable: true
+})
 
-console.log(obj)
-obj.name = 'zhangsan'
-console.log(obj)
-delete obj.name
-console.log(obj)
+// console.log(obj)
+// obj.name = 'zhangsan'
+// console.log(obj)
+// delete obj.name
+// console.log(obj)
+
+for(let key in obj){
+    console.log(key)
+}
 
