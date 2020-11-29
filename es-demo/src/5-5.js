@@ -1,8 +1,9 @@
 const validJSON = json => {
     try {
         JSON.parse(json)
+        return true
     } catch(e) {
-        console.log(e)
+        return false
     }
 }
 
