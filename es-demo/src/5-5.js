@@ -7,5 +7,5 @@ const validJSON = json => {
     }
 }
 
-const json = '{name":"QH", "course": "es"}'
+const json = '{"name":"QH", "course": "es"}'
 console.log(validJSON(json))
