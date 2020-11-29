@@ -10,11 +10,19 @@
 // console.log(fromEntries)
 
 // map -> 对象
-const map = new Map()
-map.set('name', 'QH')
-map.set('course', 'es')
-console.log(map)
-const fromEntries = Object.fromEntries(map)
-console.log(fromEntries)
+// const map = new Map()
+// map.set('name', 'QH')
+// map.set('course', 'es')
+// console.log(map)
+// const fromEntries = Object.fromEntries(map)
+// console.log(fromEntries)
 
+const course = {
+    math: 80,
+    english: 85,
+    chinese: 90
+}
+const res = Object.entries(course).filter(([key, val]) => val > 80)
+console.log(res)
+console.log(Object.fromEntries(res))
 
