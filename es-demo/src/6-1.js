@@ -32,11 +32,22 @@ const regExp = /<div>(.*)<\/div>/g
 // console.log(str.match(regExp))
 
 // replace
+// function selectDiv(regExp, str){
+//     let matches = []
+//     str.replace(regExp, (all, first) => {
+//         matches.push(first)
+//     })
+//     return matches
+// }
+// const res = selectDiv(regExp, str)
+// console.log(res)
+
+// matchAll
 function selectDiv(regExp, str){
     let matches = []
-    str.replace(regExp, (all, first) => {
-        matches.push(first)
-    })
+    for(let match of str.matchAll(regExp)){
+        matches.push(match[1])
+    }
     return matches
 }
 const res = selectDiv(regExp, str)
