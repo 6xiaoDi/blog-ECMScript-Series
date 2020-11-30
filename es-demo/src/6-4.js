@@ -35,8 +35,10 @@ Promise.allSettled([
         data: [7, 8, 9]
     }),
 ]).then(res=>{
-    console.log(res)
-    console.log('成功')
+    // console.log(res)
+    // console.log('成功')
+    const data = res.filter(item => item.status === 'fulfilled')
+    console.log(data)
 }).catch(err=>{
     console.log(err)
     console.log('失败')
