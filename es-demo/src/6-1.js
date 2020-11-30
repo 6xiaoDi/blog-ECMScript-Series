@@ -24,7 +24,7 @@ const str = `
 //     }
 //     return matches
 // }
-const regExp = /<div>(.*)<\/div>/g
+const regExp = /<div>(.*)<\/div>/
 // const res = selectDiv(regExp, str)
 // console.log(res)
 
