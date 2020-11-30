@@ -3,9 +3,9 @@ Promise.all([
         code: 200,
         data: [1, 2, 3]
     }),
-    Promise.resolve({
-        code: 200,
-        data: [4, 5, 6]
+    Promise.reject({
+        code: 500,
+        data: []
     }),
     Promise.resolve({
         code: 200,
