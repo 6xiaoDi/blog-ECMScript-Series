@@ -20,7 +20,7 @@ function selectDiv(regExp, str){
         if(match == null){
             break
         }
-        matches.push(match)
+        matches.push(match[1])
     }
     return matches
 }
