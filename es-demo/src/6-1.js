@@ -29,4 +29,15 @@ const regExp = /<div>(.*)<\/div>/g
 // console.log(res)
 
 // match
-console.log(str.match(regExp))
+// console.log(str.match(regExp))
+
+// replace
+function selectDiv(regExp, str){
+    let matches = []
+    str.replace(regExp, (all, first) => {
+        matches.push(first)
+    })
+    return matches
+}
+const res = selectDiv(regExp, str)
+console.log(res)
