@@ -13,9 +13,9 @@ const str = `
 function selectDiv(regExp, str){
     let matches = [] // 输出匹配结果数组
     while(true){
-        // console.log(regExp.lastIndex)
+        console.log(regExp.lastIndex)
         const match = regExp.exec(str)
-        // console.log(match)
+        console.log(match)
         // 未匹配上
         if(match == null){
             break
