@@ -10,20 +10,23 @@ const str = `
     </html>
 `
 // exec g
-function selectDiv(regExp, str){
-    let matches = [] // 输出匹配结果数组
-    while(true){
-        console.log(regExp.lastIndex)
-        const match = regExp.exec(str)
-        console.log(match)
-        // 未匹配上
-        if(match == null){
-            break
-        }
-        matches.push(match[1])
-    }
-    return matches
-}
+// function selectDiv(regExp, str){
+//     let matches = [] // 输出匹配结果数组
+//     while(true){
+//         // console.log(regExp.lastIndex)
+//         const match = regExp.exec(str)
+//         // console.log(match)
+//         // 未匹配上
+//         if(match == null){
+//             break
+//         }
+//         matches.push(match[1])
+//     }
+//     return matches
+// }
 const regExp = /<div>(.*)<\/div>/g
-const res = selectDiv(regExp, str)
-console.log(res)
+// const res = selectDiv(regExp, str)
+// console.log(res)
+
+// match
+console.log(str.match(regExp))
