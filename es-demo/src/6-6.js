@@ -7,8 +7,13 @@ const user = {
         }
     }
 }
-const street = user && user.address && user.address.street
-console.log(street)
+// const street = user && user.address && user.address.street
+// console.log(street)
 
-const num = user && user.address && user.address.getNum && user.address.getNum()
+// const num = user && user.address && user.address.getNum && user.address.getNum()
+// console.log(num)
+
+const street = user?.address?.street
+console.log(street)
+const num = user?.address?.getNum?.()
 console.log(num)
