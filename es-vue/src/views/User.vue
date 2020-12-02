@@ -15,16 +15,10 @@ export default {
       userList: []
     }
   },
-  created () {
-    axios
-      .get('http://jsonplaceholder.typicode.com/users')
-      .then((res) => {
-        console.log(res)
-        this.userList = res.data
-      })
-      .catch((err) => {
-        console.log(err)
-      })
+  async created () {
+    // 解构赋值
+    const { data } = await axios.get('http://jsonplaceholder.typicode.com/users')
+    this.userList = data
   }
 }
 </script>
