@@ -78,10 +78,16 @@ export default {
           })
         }))
       }
-      Promise.all(uploadRequest).then(res => {
-        console.log('Promise.all')
+      Promise.allSettled(uploadRequest).then(res => {
+        console.log('Promise.allSettled')
         console.log(res)
-        this.imgList = res
+        const imgs = []
+        for (const item of res) {
+          if (item.status === 'fulfilled' || item.status === 'resolved') {
+            imgs.push(item.value)
+          }
+        }
+        this.imgList = imgs
         this.isUploading = false
       }).catch(err => {
         console.log(err)
