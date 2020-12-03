@@ -6,6 +6,11 @@
            @change="onChange" ref="file"
     >
     <p class="tip">提示：一次可选择多张图片，最多不超过9张（单张图片大小 &lt; 1M）</p>
+    <ul class="img-container">
+      <li v-for="(item, index) in imgList" :key="index"
+          :style="{background: `url(${item}) no-repeat center/contain`}"
+      ></li>
+    </ul>
   </div>
 </template>
 
@@ -65,6 +70,7 @@ export default {
             }
           }).then(res => {
             console.log(res)
+            this.imgList = [...this.imgList, 'http://' + res.Location]
             resolve(res)
           }).catch(err => {
             console.log(err)
@@ -92,5 +98,12 @@ export default {
   .tip {
     color: #ccc;
   }
-
+  .img-container > li{
+    list-style: none;
+    width: 150px;
+    height: 100px;
+    float: left;
+    margin: 0 30px 30px 0;
+    border: 1px solid #ccc;
+  }
 </style>
