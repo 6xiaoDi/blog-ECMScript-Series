@@ -51,7 +51,8 @@ export default {
         }
         files.push(file)
       }
-      this.uploadFilesByOSS(files)
+      // this.uploadFilesByOSS(files)
+      this.uploadFilesByOSS2(files)
     },
     // 上传多图到图床OSS
     uploadFilesByOSS (files) {
@@ -92,6 +93,26 @@ export default {
       }).catch(err => {
         console.log(err)
       })
+    },
+    // async / await
+    async uploadFilesByOSS2 (files) {
+      this.isUploading = true
+      const imgs = []
+      for (const file of files) {
+        const result = await this.client.putObject({
+          Bucket: Bucket,
+          Region: Region,
+          Key: `${Math.random()}-${file.name}`,
+          StorageClass: 'STANDARD',
+          Body: file, // 上传文件对象
+          onProgress: function (progressData) {
+            console.log(JSON.stringify(progressData))
+          }
+        })
+        imgs.push('http://' + result.Location)
+      }
+      this.imgList = imgs
+      this.isUploading = false
     }
   }
 }
