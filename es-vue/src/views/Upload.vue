@@ -69,9 +69,9 @@ export default {
               console.log(JSON.stringify(progressData))
             }
           }).then(res => {
-            console.log(res)
-            this.imgList = [...this.imgList, 'http://' + res.Location]
-            resolve(res)
+            // console.log(res)
+            // this.imgList = [...this.imgList, 'http://' + res.Location]
+            resolve('http://' + res.Location)
           }).catch(err => {
             console.log(err)
             reject(err)
@@ -81,6 +81,7 @@ export default {
       Promise.all(uploadRequest).then(res => {
         console.log('Promise.all')
         console.log(res)
+        this.imgList = res
         this.isUploading = false
       }).catch(err => {
         console.log(err)
