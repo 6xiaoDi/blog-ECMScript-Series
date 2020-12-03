@@ -1,9 +1,9 @@
 <template>
   <div>
-    <label for="upload" class="choose-img" >选择图片上传</label>
+    <label for="upload" class="choose-img" :class="{upLoading: isUploading}">选择图片上传</label>
     <input type="file" multiple id="upload"
            style="display: none;" accept="image/*"
-           @change="onChange" ref="file"
+           @change="onChange" ref="file" :disabled="isUploading"
     >
     <p class="tip">提示：一次可选择多张图片，最多不超过9张（单张图片大小 &lt; 1M）</p>
     <ul class="img-container">
@@ -78,6 +78,13 @@ export default {
           })
         }))
       }
+      Promise.all(uploadRequest).then(res => {
+        console.log('Promise.all')
+        console.log(res)
+        this.isUploading = false
+      }).catch(err => {
+        console.log(err)
+      })
     }
   }
 }
@@ -105,5 +112,8 @@ export default {
     float: left;
     margin: 0 30px 30px 0;
     border: 1px solid #ccc;
+  }
+  .upLoading{
+    background-color: #ccc;
   }
 </style>
